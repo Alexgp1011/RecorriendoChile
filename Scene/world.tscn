@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://dg1isiidfucwb" path="res://Scripts/activador_evento_calle.gd" id="15_a6mvv"]
 [ext_resource type="PackedScene" path="res://Scene/fachadas/fachadas_ahumada.tscn" id="20_fachadas"]
 [ext_resource type="PackedScene" path="res://Scene/mobiliario/mobiliario_ahumada.tscn" id="21_mobiliario"]
+[ext_resource type="PackedScene" path="res://Scene/eurocentro/vitrinas_eurocentro.tscn" id="22_vitrinas"]
 
 [sub_resource type="GDScript" id="GDScript_dlwip"]
 script/source = "extends Node3D
@@ -149,9 +150,10 @@ material = SubResource("StandardMaterial3D_15ghf")
 size = Vector3(0.14, 3.5, 5.9726563)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxb74"]
-albedo_color = Color(0.12, 0.2, 0.24, 1)
-roughness = 0.15
-metallic = 0.4
+transparency = 1
+albedo_color = Color(0.12, 0.2, 0.24, 0.28)
+roughness = 0.05
+metallic = 0.2
 
 [sub_resource type="BoxMesh" id="BoxMesh_15ghf"]
 material = SubResource("StandardMaterial3D_dxb74")
@@ -165,9 +167,10 @@ material = SubResource("StandardMaterial3D_aodgb")
 size = Vector3(0.14, 3.5, 11.949219)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4p0s"]
-albedo_color = Color(0.12, 0.2, 0.24, 1)
-roughness = 0.15
-metallic = 0.4
+transparency = 1
+albedo_color = Color(0.12, 0.2, 0.24, 0.28)
+roughness = 0.05
+metallic = 0.2
 
 [sub_resource type="BoxMesh" id="BoxMesh_aodgb"]
 material = SubResource("StandardMaterial3D_m4p0s")
@@ -920,7 +923,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999962, 1.85, 6.5253906)
 mesh = SubResource("BoxMesh_dxb74")
 
 [node name="VitrinaDerecha" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/LocalesExteriores" unique_id=530830039]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5100002, 1.75, 6.5255356)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.62, 1.75, 6.5255356)
 mesh = SubResource("BoxMesh_aodgb")
 
 [node name="FranjaPublicidadIzq" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/LocalesExteriores" unique_id=2037984430]
@@ -930,6 +933,8 @@ mesh = SubResource("BoxMesh_m4p0s")
 [node name="FranjaPublicidadDer" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/LocalesExteriores" unique_id=2061211078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6000004, 3.1, 6.672901)
 mesh = SubResource("BoxMesh_hjo63")
+
+[node name="VitrinasEurocentro" parent="Escenario/Galeriacomercial/DecoracionEurocentro" instance=ExtResource("22_vitrinas")]
 
 [node name="Zonadeteccion" type="Node3D" parent="Escenario" unique_id=440909925]
 

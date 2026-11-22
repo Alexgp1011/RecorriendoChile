@@ -16,6 +16,8 @@ const VIEWS := [
 	["06-eurocentro-entrada", Vector3(2, 1.7, -47), Vector3(9, 2.5, -47)],
 	["07-fachada-derecha-fondo", Vector3(3, 1.7, -70), Vector3(9, 5, -73)],
 	["08-quiosco-farol", Vector3(-2.5, 1.7, -17), Vector3(-7.6, 1.6, -22)],
+	["09-vitrina-izquierda", Vector3(4.5, 1.7, -53.5), Vector3(9, 1.9, -53.5)],
+	["10-vitrina-derecha", Vector3(2.5, 1.7, -37.5), Vector3(9, 1.7, -37.5)],
 ]
 
 ## Frames to let the world settle before the first capture, and between views.

@@ -1,0 +1,1150 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="MatFondo"]
+albedo_color = Color(1, 0.95, 0.85, 1)
+emission_enabled = true
+emission = Color(1, 0.92, 0.78, 1)
+emission_energy_multiplier = 0.45
+
+[sub_resource type="StandardMaterial3D" id="MatEstante"]
+albedo_color = Color(0.82, 0.84, 0.86, 1)
+metallic = 0.6
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="MatProd0"]
+albedo_color = Color(0.898, 0.224, 0.208, 1.0)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatProd1"]
+albedo_color = Color(0.118, 0.533, 0.898, 1.0)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatProd2"]
+albedo_color = Color(0.992, 0.847, 0.208, 1.0)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatProd3"]
+albedo_color = Color(0.263, 0.627, 0.278, 1.0)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatProd4"]
+albedo_color = Color(0.557, 0.141, 0.667, 1.0)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatProd5"]
+albedo_color = Color(0.984, 0.549, 0.000, 1.0)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatProd6"]
+albedo_color = Color(0.925, 0.937, 0.945, 1.0)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatProd7"]
+albedo_color = Color(0.000, 0.675, 0.757, 1.0)
+roughness = 0.6
+
+[sub_resource type="BoxMesh" id="Fondo_ExhibicionIzquierda"]
+material = SubResource("MatFondo")
+size = Vector3(0.01, 2.750, 5.300)
+
+[sub_resource type="BoxMesh" id="Estante_ExhibicionIzquierda"]
+material = SubResource("MatEstante")
+size = Vector3(0.08, 0.03, 5.200)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_0"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.150, 0.172)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_1"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.193, 0.206)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_2"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.137, 0.154)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_3"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.205, 0.135)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_4"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.237, 0.221)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_5"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.315, 0.183)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_6"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.204, 0.141)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_7"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.256, 0.210)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_8"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.194, 0.222)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_9"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.219, 0.219)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_10"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.305, 0.194)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_11"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.260, 0.247)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_12"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.219, 0.168)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_13"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.316, 0.166)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_14"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.188, 0.146)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_15"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.136, 0.274)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_16"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.219, 0.176)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_0_17"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.174, 0.135)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_0"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.249, 0.232)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_1"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.254, 0.182)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_2"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.242, 0.177)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_3"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.146, 0.243)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_4"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.219, 0.267)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_5"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.297, 0.208)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_6"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.203, 0.165)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_7"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.166, 0.181)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_8"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.167, 0.157)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_9"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.176, 0.149)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_10"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.233, 0.179)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_11"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.244, 0.202)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_12"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.310, 0.259)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_13"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.216, 0.183)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_14"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.162, 0.131)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_15"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.140, 0.216)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionIzquierda_1_16"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.243, 0.272)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_c62828"]
+albedo_color = Color(0.776, 0.157, 0.157, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionIzquierda_0"]
+material = SubResource("MatAfiche_c62828")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_283593"]
+albedo_color = Color(0.157, 0.208, 0.576, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionIzquierda_1"]
+material = SubResource("MatAfiche_283593")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_1b5e20"]
+albedo_color = Color(0.106, 0.369, 0.125, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionIzquierda_2"]
+material = SubResource("MatAfiche_1b5e20")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="BoxMesh" id="Luz_ExhibicionIzquierda"]
+material = SubResource("MatFondo")
+size = Vector3(0.04, 0.03, 5.200)
+
+[sub_resource type="BoxMesh" id="Fondo_ExhibicionDerecha"]
+material = SubResource("MatFondo")
+size = Vector3(0.01, 2.750, 11.200)
+
+[sub_resource type="BoxMesh" id="Estante_ExhibicionDerecha"]
+material = SubResource("MatEstante")
+size = Vector3(0.08, 0.03, 11.100)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_0"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.150, 0.218)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_1"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.215, 0.216)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_2"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.213, 0.279)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_3"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.270, 0.143)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_4"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.223, 0.231)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_5"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.149, 0.205)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_6"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.249, 0.168)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_7"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.193, 0.162)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_8"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.228, 0.156)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_9"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.278, 0.218)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_10"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.268, 0.251)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_11"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.266, 0.199)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_12"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.159, 0.196)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_13"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.318, 0.270)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_14"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.214, 0.136)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_15"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.300, 0.220)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_16"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.280, 0.224)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_17"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.198, 0.139)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_18"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.278, 0.149)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_19"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.264, 0.271)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_20"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.265, 0.271)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_21"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.238, 0.124)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_22"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.285, 0.143)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_23"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.230, 0.176)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_24"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.265, 0.248)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_25"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.207, 0.269)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_26"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.170, 0.154)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_27"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.185, 0.242)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_28"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.268, 0.130)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_29"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.223, 0.250)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_30"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.124, 0.204)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_31"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.275, 0.217)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_32"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.265, 0.196)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_33"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.231, 0.203)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_34"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.158, 0.129)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_0_35"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.232, 0.201)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_0"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.221, 0.218)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_1"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.227, 0.192)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_2"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.225, 0.160)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_3"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.161, 0.263)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_4"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.208, 0.139)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_5"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.163, 0.189)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_6"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.151, 0.264)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_7"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.314, 0.261)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_8"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.297, 0.135)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_9"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.152, 0.253)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_10"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.204, 0.185)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_11"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.124, 0.236)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_12"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.186, 0.123)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_13"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.317, 0.130)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_14"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.173, 0.137)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_15"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.271, 0.149)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_16"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.309, 0.228)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_17"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.234, 0.267)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_18"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.258, 0.129)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_19"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.123, 0.163)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_20"]
+material = SubResource("MatProd1")
+size = Vector3(0.06, 0.291, 0.133)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_21"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.122, 0.139)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_22"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.146, 0.163)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_23"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.172, 0.275)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_24"]
+material = SubResource("MatProd3")
+size = Vector3(0.06, 0.181, 0.170)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_25"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.156, 0.200)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_26"]
+material = SubResource("MatProd0")
+size = Vector3(0.06, 0.127, 0.279)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_27"]
+material = SubResource("MatProd7")
+size = Vector3(0.06, 0.158, 0.208)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_28"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.252, 0.192)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_29"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.298, 0.207)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_30"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.189, 0.277)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_31"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.131, 0.176)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_32"]
+material = SubResource("MatProd6")
+size = Vector3(0.06, 0.296, 0.220)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_33"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.288, 0.134)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_34"]
+material = SubResource("MatProd2")
+size = Vector3(0.06, 0.129, 0.231)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_35"]
+material = SubResource("MatProd5")
+size = Vector3(0.06, 0.173, 0.191)
+
+[sub_resource type="BoxMesh" id="Prod_ExhibicionDerecha_1_36"]
+material = SubResource("MatProd4")
+size = Vector3(0.06, 0.169, 0.208)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_ad1457"]
+albedo_color = Color(0.678, 0.078, 0.341, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionDerecha_0"]
+material = SubResource("MatAfiche_ad1457")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_212121"]
+albedo_color = Color(0.129, 0.129, 0.129, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionDerecha_1"]
+material = SubResource("MatAfiche_212121")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_0d47a1"]
+albedo_color = Color(0.051, 0.278, 0.631, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionDerecha_2"]
+material = SubResource("MatAfiche_0d47a1")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_4a148c"]
+albedo_color = Color(0.290, 0.078, 0.549, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionDerecha_3"]
+material = SubResource("MatAfiche_4a148c")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="StandardMaterial3D" id="MatAfiche_e65100"]
+albedo_color = Color(0.902, 0.318, 0.000, 1.0)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Afiche_ExhibicionDerecha_4"]
+material = SubResource("MatAfiche_e65100")
+size = Vector3(0.02, 0.900, 1.300)
+
+[sub_resource type="BoxMesh" id="Luz_ExhibicionDerecha"]
+material = SubResource("MatFondo")
+size = Vector3(0.04, 0.03, 11.100)
+
+[node name="VitrinasEurocentro" type="Node3D"]
+
+[node name="ExhibicionIzquierda" type="Node3D" parent="."]
+
+[node name="Fondo" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4650, 2.0500, -9.48)
+cast_shadow = 0
+mesh = SubResource("Fondo_ExhibicionIzquierda")
+
+[node name="Estante1" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.1, -9.48)
+mesh = SubResource("Estante_ExhibicionIzquierda")
+
+[node name="Producto1_1" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.1901, -11.8441)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_0")
+
+[node name="Producto1_2" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2116, -11.5988)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_1")
+
+[node name="Producto1_3" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.1836, -11.2869)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_2")
+
+[node name="Producto1_4" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2175, -11.0862)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_3")
+
+[node name="Producto1_5" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2333, -10.7732)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_4")
+
+[node name="Producto1_6" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2726, -10.4691)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_5")
+
+[node name="Producto1_7" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2169, -10.2066)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_6")
+
+[node name="Producto1_8" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2432, -9.9297)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_7")
+
+[node name="Producto1_9" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2122, -9.6114)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_8")
+
+[node name="Producto1_10" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2246, -9.2900)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_9")
+
+[node name="Producto1_11" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2673, -8.9633)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_10")
+
+[node name="Producto1_12" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2449, -8.6655)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_11")
+
+[node name="Producto1_13" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2245, -8.4006)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_12")
+
+[node name="Producto1_14" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2730, -8.1179)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_13")
+
+[node name="Producto1_15" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2092, -7.8656)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_14")
+
+[node name="Producto1_16" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.1828, -7.5674)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_15")
+
+[node name="Producto1_17" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2247, -7.2619)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_16")
+
+[node name="Producto1_18" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.2020, -7.0502)
+mesh = SubResource("Prod_ExhibicionIzquierda_0_17")
+
+[node name="Estante2" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.8, -9.48)
+mesh = SubResource("Estante_ExhibicionIzquierda")
+
+[node name="Producto2_1" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9397, -11.8139)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_0")
+
+[node name="Producto2_2" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9419, -11.5313)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_1")
+
+[node name="Producto2_3" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9361, -11.2173)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_2")
+
+[node name="Producto2_4" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.8879, -10.9521)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_3")
+
+[node name="Producto2_5" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9247, -10.6115)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_4")
+
+[node name="Producto2_6" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9633, -10.2838)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_5")
+
+[node name="Producto2_7" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9165, -9.9698)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_6")
+
+[node name="Producto2_8" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.8981, -9.6856)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_7")
+
+[node name="Producto2_9" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.8983, -9.4508)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_8")
+
+[node name="Producto2_10" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9032, -9.1728)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_9")
+
+[node name="Producto2_11" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9316, -8.9210)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_10")
+
+[node name="Producto2_12" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9368, -8.6181)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_11")
+
+[node name="Producto2_13" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9702, -8.2961)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_12")
+
+[node name="Producto2_14" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9232, -7.9890)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_13")
+
+[node name="Producto2_15" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.8959, -7.7765)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_14")
+
+[node name="Producto2_16" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.8852, -7.5432)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_15")
+
+[node name="Producto2_17" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5090, 1.9364, -7.2009)
+mesh = SubResource("Prod_ExhibicionIzquierda_1_16")
+
+[node name="Afiche1" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4990, 2.4000, -11.2467)
+mesh = SubResource("Afiche_ExhibicionIzquierda_0")
+
+[node name="Texto" type="Label3D" parent="ExhibicionIzquierda/Afiche1"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00316
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 0.922, 0.231, 1.0)
+outline_size = 0
+text = "OFERTAS"
+font_size = 64
+
+[node name="Afiche2" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4990, 2.4000, -9.4800)
+mesh = SubResource("Afiche_ExhibicionIzquierda_1")
+
+[node name="Texto" type="Label3D" parent="ExhibicionIzquierda/Afiche2"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00443
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1.0)
+outline_size = 0
+text = "RETRO"
+font_size = 64
+
+[node name="Afiche3" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4990, 2.4000, -7.7133)
+mesh = SubResource("Afiche_ExhibicionIzquierda_2")
+
+[node name="Texto" type="Label3D" parent="ExhibicionIzquierda/Afiche3"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00443
+double_sided = false
+texture_filter = 0
+modulate = Color(0.725, 0.965, 0.792, 1.0)
+outline_size = 0
+text = "GAMER"
+font_size = 64
+
+[node name="TiraLuz" type="MeshInstance3D" parent="ExhibicionIzquierda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4990, 3.3950, -9.48)
+cast_shadow = 0
+mesh = SubResource("Luz_ExhibicionIzquierda")
+
+[node name="ExhibicionDerecha" type="Node3D" parent="."]
+
+[node name="Fondo" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4760, 1.7500, 6.5255)
+cast_shadow = 0
+mesh = SubResource("Fondo_ExhibicionDerecha")
+
+[node name="Estante1" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.8, 6.5255)
+mesh = SubResource("Estante_ExhibicionDerecha")
+
+[node name="Producto1_1" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.8899, 1.2346)
+mesh = SubResource("Prod_ExhibicionDerecha_0_0")
+
+[node name="Producto1_2" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9224, 1.5879)
+mesh = SubResource("Prod_ExhibicionDerecha_0_1")
+
+[node name="Producto1_3" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9216, 1.9620)
+mesh = SubResource("Prod_ExhibicionDerecha_0_2")
+
+[node name="Producto1_4" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9500, 2.2510)
+mesh = SubResource("Prod_ExhibicionDerecha_0_3")
+
+[node name="Producto1_5" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9266, 2.5310)
+mesh = SubResource("Prod_ExhibicionDerecha_0_4")
+
+[node name="Producto1_6" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.8897, 2.8842)
+mesh = SubResource("Prod_ExhibicionDerecha_0_5")
+
+[node name="Producto1_7" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9393, 3.1885)
+mesh = SubResource("Prod_ExhibicionDerecha_0_6")
+
+[node name="Producto1_8" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9117, 3.4659)
+mesh = SubResource("Prod_ExhibicionDerecha_0_7")
+
+[node name="Producto1_9" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9292, 3.7066)
+mesh = SubResource("Prod_ExhibicionDerecha_0_8")
+
+[node name="Producto1_10" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9538, 4.0008)
+mesh = SubResource("Prod_ExhibicionDerecha_0_9")
+
+[node name="Producto1_11" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9490, 4.3579)
+mesh = SubResource("Prod_ExhibicionDerecha_0_10")
+
+[node name="Producto1_12" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9481, 4.6508)
+mesh = SubResource("Prod_ExhibicionDerecha_0_11")
+
+[node name="Producto1_13" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.8944, 4.9691)
+mesh = SubResource("Prod_ExhibicionDerecha_0_12")
+
+[node name="Producto1_14" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9738, 5.2921)
+mesh = SubResource("Prod_ExhibicionDerecha_0_13")
+
+[node name="Producto1_15" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9220, 5.5524)
+mesh = SubResource("Prod_ExhibicionDerecha_0_14")
+
+[node name="Producto1_16" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9650, 5.7989)
+mesh = SubResource("Prod_ExhibicionDerecha_0_15")
+
+[node name="Producto1_17" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9550, 6.1143)
+mesh = SubResource("Prod_ExhibicionDerecha_0_16")
+
+[node name="Producto1_18" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9139, 6.4212)
+mesh = SubResource("Prod_ExhibicionDerecha_0_17")
+
+[node name="Producto1_19" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9539, 6.6581)
+mesh = SubResource("Prod_ExhibicionDerecha_0_18")
+
+[node name="Producto1_20" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9472, 6.9259)
+mesh = SubResource("Prod_ExhibicionDerecha_0_19")
+
+[node name="Producto1_21" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9475, 7.2834)
+mesh = SubResource("Prod_ExhibicionDerecha_0_20")
+
+[node name="Producto1_22" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9341, 7.6208)
+mesh = SubResource("Prod_ExhibicionDerecha_0_21")
+
+[node name="Producto1_23" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9577, 7.8773)
+mesh = SubResource("Prod_ExhibicionDerecha_0_22")
+
+[node name="Producto1_24" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9299, 8.1461)
+mesh = SubResource("Prod_ExhibicionDerecha_0_23")
+
+[node name="Producto1_25" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9476, 8.4100)
+mesh = SubResource("Prod_ExhibicionDerecha_0_24")
+
+[node name="Producto1_26" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9184, 8.7661)
+mesh = SubResource("Prod_ExhibicionDerecha_0_25")
+
+[node name="Producto1_27" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9002, 9.1020)
+mesh = SubResource("Prod_ExhibicionDerecha_0_26")
+
+[node name="Producto1_28" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9076, 9.3951)
+mesh = SubResource("Prod_ExhibicionDerecha_0_27")
+
+[node name="Producto1_29" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9490, 9.7061)
+mesh = SubResource("Prod_ExhibicionDerecha_0_28")
+
+[node name="Producto1_30" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9267, 10.0058)
+mesh = SubResource("Prod_ExhibicionDerecha_0_29")
+
+[node name="Producto1_31" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.8769, 10.3308)
+mesh = SubResource("Prod_ExhibicionDerecha_0_30")
+
+[node name="Producto1_32" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9526, 10.6612)
+mesh = SubResource("Prod_ExhibicionDerecha_0_31")
+
+[node name="Producto1_33" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9475, 10.9333)
+mesh = SubResource("Prod_ExhibicionDerecha_0_32")
+
+[node name="Producto1_34" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9305, 11.2120)
+mesh = SubResource("Prod_ExhibicionDerecha_0_33")
+
+[node name="Producto1_35" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.8941, 11.5075)
+mesh = SubResource("Prod_ExhibicionDerecha_0_34")
+
+[node name="Producto1_36" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 0.9312, 11.7922)
+mesh = SubResource("Prod_ExhibicionDerecha_0_35")
+
+[node name="Estante2" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5, 6.5255)
+mesh = SubResource("Estante_ExhibicionDerecha")
+
+[node name="Producto2_1" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6256, 1.2345)
+mesh = SubResource("Prod_ExhibicionDerecha_1_0")
+
+[node name="Producto2_2" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6283, 1.5520)
+mesh = SubResource("Prod_ExhibicionDerecha_1_1")
+
+[node name="Producto2_3" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6273, 1.8237)
+mesh = SubResource("Prod_ExhibicionDerecha_1_2")
+
+[node name="Producto2_4" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5953, 2.1680)
+mesh = SubResource("Prod_ExhibicionDerecha_1_3")
+
+[node name="Producto2_5" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6192, 2.4315)
+mesh = SubResource("Prod_ExhibicionDerecha_1_4")
+
+[node name="Producto2_6" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5963, 2.7059)
+mesh = SubResource("Prod_ExhibicionDerecha_1_5")
+
+[node name="Producto2_7" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5904, 3.0525)
+mesh = SubResource("Prod_ExhibicionDerecha_1_6")
+
+[node name="Producto2_8" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6718, 3.3778)
+mesh = SubResource("Prod_ExhibicionDerecha_1_7")
+
+[node name="Producto2_9" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6635, 3.6931)
+mesh = SubResource("Prod_ExhibicionDerecha_1_8")
+
+[node name="Producto2_10" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5911, 4.0263)
+mesh = SubResource("Prod_ExhibicionDerecha_1_9")
+
+[node name="Producto2_11" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6171, 4.3847)
+mesh = SubResource("Prod_ExhibicionDerecha_1_10")
+
+[node name="Producto2_12" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5769, 4.6734)
+mesh = SubResource("Prod_ExhibicionDerecha_1_11")
+
+[node name="Producto2_13" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6081, 4.9423)
+mesh = SubResource("Prod_ExhibicionDerecha_1_12")
+
+[node name="Producto2_14" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6735, 5.1650)
+mesh = SubResource("Prod_ExhibicionDerecha_1_13")
+
+[node name="Producto2_15" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6016, 5.4360)
+mesh = SubResource("Prod_ExhibicionDerecha_1_14")
+
+[node name="Producto2_16" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6506, 5.7104)
+mesh = SubResource("Prod_ExhibicionDerecha_1_15")
+
+[node name="Producto2_17" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6696, 6.0255)
+mesh = SubResource("Prod_ExhibicionDerecha_1_16")
+
+[node name="Producto2_18" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6321, 6.3365)
+mesh = SubResource("Prod_ExhibicionDerecha_1_17")
+
+[node name="Producto2_19" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6438, 6.5927)
+mesh = SubResource("Prod_ExhibicionDerecha_1_18")
+
+[node name="Producto2_20" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5767, 6.8694)
+mesh = SubResource("Prod_ExhibicionDerecha_1_19")
+
+[node name="Producto2_21" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6606, 7.1398)
+mesh = SubResource("Prod_ExhibicionDerecha_1_20")
+
+[node name="Producto2_22" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5762, 7.3500)
+mesh = SubResource("Prod_ExhibicionDerecha_1_21")
+
+[node name="Producto2_23" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5879, 7.6346)
+mesh = SubResource("Prod_ExhibicionDerecha_1_22")
+
+[node name="Producto2_24" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6012, 7.9880)
+mesh = SubResource("Prod_ExhibicionDerecha_1_23")
+
+[node name="Producto2_25" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6055, 8.2786)
+mesh = SubResource("Prod_ExhibicionDerecha_1_24")
+
+[node name="Producto2_26" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5928, 8.5397)
+mesh = SubResource("Prod_ExhibicionDerecha_1_25")
+
+[node name="Producto2_27" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5787, 8.9016)
+mesh = SubResource("Prod_ExhibicionDerecha_1_26")
+
+[node name="Producto2_28" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5939, 9.2612)
+mesh = SubResource("Prod_ExhibicionDerecha_1_27")
+
+[node name="Producto2_29" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6408, 9.5332)
+mesh = SubResource("Prod_ExhibicionDerecha_1_28")
+
+[node name="Producto2_30" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6639, 9.8417)
+mesh = SubResource("Prod_ExhibicionDerecha_1_29")
+
+[node name="Producto2_31" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6093, 10.1958)
+mesh = SubResource("Prod_ExhibicionDerecha_1_30")
+
+[node name="Producto2_32" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5804, 10.5087)
+mesh = SubResource("Prod_ExhibicionDerecha_1_31")
+
+[node name="Producto2_33" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6630, 10.7578)
+mesh = SubResource("Prod_ExhibicionDerecha_1_32")
+
+[node name="Producto2_34" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6591, 10.9993)
+mesh = SubResource("Prod_ExhibicionDerecha_1_33")
+
+[node name="Producto2_35" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5795, 11.2853)
+mesh = SubResource("Prod_ExhibicionDerecha_1_34")
+
+[node name="Producto2_36" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.6013, 11.5606)
+mesh = SubResource("Prod_ExhibicionDerecha_1_35")
+
+[node name="Producto2_37" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5200, 1.5994, 11.8976)
+mesh = SubResource("Prod_ExhibicionDerecha_1_36")
+
+[node name="Afiche1" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5100, 2.1000, 2.0455)
+mesh = SubResource("Afiche_ExhibicionDerecha_0")
+
+[node name="Texto" type="Label3D" parent="ExhibicionDerecha/Afiche1"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00443
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1.0)
+outline_size = 0
+text = "ANIME"
+font_size = 64
+
+[node name="Afiche2" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5100, 2.1000, 4.2855)
+mesh = SubResource("Afiche_ExhibicionDerecha_1")
+
+[node name="Texto" type="Label3D" parent="ExhibicionDerecha/Afiche2"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00443
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1.0)
+outline_size = 0
+text = "MANGA"
+font_size = 64
+
+[node name="Afiche3" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5100, 2.1000, 6.5255)
+mesh = SubResource("Afiche_ExhibicionDerecha_2")
+
+[node name="Texto" type="Label3D" parent="ExhibicionDerecha/Afiche3"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00221
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 0.835, 0.310, 1.0)
+outline_size = 0
+text = "CARTAS TCG"
+font_size = 64
+
+[node name="Afiche4" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5100, 2.1000, 8.7655)
+mesh = SubResource("Afiche_ExhibicionDerecha_3")
+
+[node name="Texto" type="Label3D" parent="ExhibicionDerecha/Afiche4"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00316
+double_sided = false
+texture_filter = 0
+modulate = Color(0.882, 0.745, 0.906, 1.0)
+outline_size = 0
+text = "FIGURAS"
+font_size = 64
+
+[node name="Afiche5" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5100, 2.1000, 11.0055)
+mesh = SubResource("Afiche_ExhibicionDerecha_4")
+
+[node name="Texto" type="Label3D" parent="ExhibicionDerecha/Afiche5"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.011, 0, 0)
+pixel_size = 0.00316
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1.0)
+outline_size = 0
+text = "COSPLAY"
+font_size = 64
+
+[node name="TiraLuz" type="MeshInstance3D" parent="ExhibicionDerecha"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5100, 3.0950, 6.5255)
+cast_shadow = 0
+mesh = SubResource("Luz_ExhibicionDerecha")

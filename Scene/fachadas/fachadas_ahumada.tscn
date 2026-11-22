@@ -302,12 +302,12 @@ mesh = SubResource("LetreroMesh_0")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00267
+pixel_size = 0.00341
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "FARMACIA\nEL ROBLE"
+text = "BAZAR"
 font_size = 64
 
 [node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
@@ -316,12 +316,12 @@ mesh = SubResource("LetreroMesh_1")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00248
+pixel_size = 0.00356
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 0.847, 0.290, 1)
 outline_size = 0
-text = "SANGUCHES\nDON TITO"
+text = "JUGOS"
 font_size = 64
 
 [node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
@@ -335,7 +335,7 @@ double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "HELADOS\nNEVADA"
+text = "COMPLETOS\nLA PICADA"
 font_size = 64
 
 [node name="Letrero4" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
@@ -344,12 +344,12 @@ mesh = SubResource("LetreroMesh_3")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00344
+pixel_size = 0.00308
 double_sided = false
 texture_filter = 0
 modulate = Color(0.478, 0.122, 0.169, 1)
 outline_size = 0
-text = "COMPLETOS\nLA PICADA"
+text = "FARMACIA\nEL ROBLE"
 font_size = 64
 
 [node name="Letrero5" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
@@ -358,12 +358,12 @@ mesh = SubResource("LetreroMesh_4")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00506
+pixel_size = 0.00396
 double_sided = false
 texture_filter = 0
 modulate = Color(0.169, 0.102, 0.039, 1)
 outline_size = 0
-text = "TELEFONIA CONDOR"
+text = "RELOJERIA\nEL TIEMPO"
 font_size = 64
 
 [node name="Modulo2" type="Node3D" parent="Edificio_Izq1"]
@@ -388,12 +388,12 @@ mesh = SubResource("LetreroMesh_5")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo2/Letrero1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00288
+pixel_size = 0.00339
 double_sided = false
 texture_filter = 0
 modulate = Color(0.361, 0.882, 0.902, 1)
 outline_size = 0
-text = "CELULARES\nAUSTRAL"
+text = "EMPANADAS"
 font_size = 64
 
 [node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
@@ -402,12 +402,12 @@ mesh = SubResource("LetreroMesh_6")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo2/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00288
+pixel_size = 0.00460
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "BANCO\nCORDILLERA"
+text = "RELOJES"
 font_size = 64
 
 [node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
@@ -416,12 +416,12 @@ mesh = SubResource("LetreroMesh_7")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo2/Letrero3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00288
+pixel_size = 0.00448
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 0.847, 0.290, 1)
 outline_size = 0
-text = "ZAPATILLAS\nVELOZ"
+text = "REGALOS"
 font_size = 64
 
 [node name="Edificio_Izq2" type="Node3D" parent="."]
@@ -461,7 +461,7 @@ mesh = SubResource("LetreroMesh_8")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00477
+pixel_size = 0.00381
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
@@ -475,12 +475,12 @@ mesh = SubResource("LetreroMesh_9")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00195
+pixel_size = 0.00400
 double_sided = false
 texture_filter = 0
 modulate = Color(0.478, 0.122, 0.169, 1)
 outline_size = 0
-text = "LIBRERIA EL PUENTE"
+text = "CALZADO"
 font_size = 64
 
 [node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
@@ -489,12 +489,12 @@ mesh = SubResource("LetreroMesh_10")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00372
+pixel_size = 0.00302
 double_sided = false
 texture_filter = 0
 modulate = Color(0.169, 0.102, 0.039, 1)
 outline_size = 0
-text = "OPTICA LA LUPA"
+text = "SANGUCHES DON TITO"
 font_size = 64
 
 [node name="Letrero4" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
@@ -503,12 +503,12 @@ mesh = SubResource("LetreroMesh_11")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00557
+pixel_size = 0.00346
 double_sided = false
 texture_filter = 0
 modulate = Color(0.361, 0.882, 0.902, 1)
 outline_size = 0
-text = "CAMBIO ALAMEDA"
+text = "LIBRERIA EL PUENTE"
 font_size = 64
 
 [node name="Modulo2" type="Node3D" parent="Edificio_Izq2"]
@@ -569,7 +569,7 @@ double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "JUGOS\nLA FRUTA"
+text = "CELULARES\nAUSTRAL"
 font_size = 64
 
 [node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq3/Modulo1"]
@@ -578,12 +578,12 @@ mesh = SubResource("LetreroMesh_13")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo1/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00375
+pixel_size = 0.00333
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 0.847, 0.290, 1)
 outline_size = 0
-text = "PAQUETERIA\nEL SUR"
+text = "SEGUROS\nACONCAGUA"
 font_size = 64
 
 [node name="Modulo2" type="Node3D" parent="Edificio_Izq3"]
@@ -608,12 +608,12 @@ mesh = SubResource("LetreroMesh_14")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00194
+pixel_size = 0.00341
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "BAZAR\nSANTA LUCIA"
+text = "FOTOS"
 font_size = 64
 
 [node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
@@ -622,12 +622,12 @@ mesh = SubResource("LetreroMesh_15")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00248
+pixel_size = 0.00356
 double_sided = false
 texture_filter = 0
 modulate = Color(0.478, 0.122, 0.169, 1)
 outline_size = 0
-text = "RELOJERIA\nEL TIEMPO"
+text = "TELAS"
 font_size = 64
 
 [node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
@@ -641,7 +641,7 @@ double_sided = false
 texture_filter = 0
 modulate = Color(0.169, 0.102, 0.039, 1)
 outline_size = 0
-text = "SEGUROS\nACONCAGUA"
+text = "PAQUETERIA\nEL SUR"
 font_size = 64
 
 [node name="Letrero4" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
@@ -650,12 +650,12 @@ mesh = SubResource("LetreroMesh_17")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00309
+pixel_size = 0.00352
 double_sided = false
 texture_filter = 0
 modulate = Color(0.361, 0.882, 0.902, 1)
 outline_size = 0
-text = "PERFUMERIA\nAROMA"
+text = "HELADOS\nNEVADA"
 font_size = 64
 
 [node name="Letrero5" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
@@ -664,12 +664,12 @@ mesh = SubResource("LetreroMesh_18")
 
 [node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00540
+pixel_size = 0.00396
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "REPUESTOS ANDES"
+text = "BAZAR\nSANTA LUCIA"
 font_size = 64
 
 [node name="Edificio_Der1" type="Node3D" parent="."]
@@ -709,12 +709,12 @@ mesh = SubResource("LetreroMesh_19")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo1/Letrero1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00288
+pixel_size = 0.00436
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 0.847, 0.290, 1)
 outline_size = 0
-text = "FARMACIA\nEL ROBLE"
+text = "MALETAS"
 font_size = 64
 
 [node name="Letrero2" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
@@ -723,12 +723,12 @@ mesh = SubResource("LetreroMesh_20")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo1/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00288
+pixel_size = 0.00536
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "SANGUCHES\nDON TITO"
+text = "OPTICA"
 font_size = 64
 
 [node name="Letrero3" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
@@ -737,12 +737,12 @@ mesh = SubResource("LetreroMesh_21")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo1/Letrero3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00288
+pixel_size = 0.00522
 double_sided = false
 texture_filter = 0
 modulate = Color(0.478, 0.122, 0.169, 1)
 outline_size = 0
-text = "HELADOS\nNEVADA"
+text = "CAMBIO"
 font_size = 64
 
 [node name="Modulo2" type="Node3D" parent="Edificio_Der1"]
@@ -767,12 +767,12 @@ mesh = SubResource("LetreroMesh_22")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00371
+pixel_size = 0.00381
 double_sided = false
 texture_filter = 0
 modulate = Color(0.169, 0.102, 0.039, 1)
 outline_size = 0
-text = "COMPLETOS\nLA PICADA"
+text = "OPTICA\nLA LUPA"
 font_size = 64
 
 [node name="Letrero2" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
@@ -781,12 +781,12 @@ mesh = SubResource("LetreroMesh_23")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00220
+pixel_size = 0.00465
 double_sided = false
 texture_filter = 0
 modulate = Color(0.361, 0.882, 0.902, 1)
 outline_size = 0
-text = "TELEFONIA CONDOR"
+text = "LIBROS"
 font_size = 64
 
 [node name="Letrero3" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
@@ -795,12 +795,12 @@ mesh = SubResource("LetreroMesh_24")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00372
+pixel_size = 0.00339
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 1.000, 1.000, 1)
 outline_size = 0
-text = "CELULARES AUSTRAL"
+text = "TELEFONIA CONDOR"
 font_size = 64
 
 [node name="Letrero4" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
@@ -809,7 +809,7 @@ mesh = SubResource("LetreroMesh_25")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00488
+pixel_size = 0.00389
 double_sided = false
 texture_filter = 0
 modulate = Color(1.000, 0.847, 0.290, 1)
@@ -884,10 +884,10 @@ mesh = SubResource("LetreroMesh_27")
 
 [node name="Texto" type="Label3D" parent="Edificio_Der2/Modulo2/Letrero2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
-pixel_size = 0.00536
+pixel_size = 0.00333
 double_sided = false
 texture_filter = 0
 modulate = Color(0.478, 0.122, 0.169, 1)
 outline_size = 0
-text = "TIENDAS\nMAPOCHO"
+text = "REPUESTOS\nANDES"
 font_size = 64

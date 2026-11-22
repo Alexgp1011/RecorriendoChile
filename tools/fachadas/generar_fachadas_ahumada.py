@@ -67,7 +67,27 @@ SIGN_NAMES = [
     "JUGOS LA FRUTA", "PAQUETERIA EL SUR", "BAZAR SANTA LUCIA",
     "RELOJERIA EL TIEMPO", "SEGUROS ACONCAGUA", "PERFUMERIA AROMA",
     "REPUESTOS ANDES",
+    # Nombres cortos: el generador los da a los letreros pequenos.
+    "OPTICA", "BAZAR", "JUGOS", "CAMBIO", "LIBROS", "RELOJES", "REGALOS",
+    "FOTOS", "CALZADO", "PAN AMASADO", "EMPANADAS", "DULCES", "CAFE", "MALETAS", "TELAS",
 ]
+FONT_SIZE = 64
+MIN_PIXEL = 0.003   # pixel_size minimo para que un letrero se lea a distancia de juego
+
+
+def fit_text(text: str, sw: float, sh: float):
+    """Mejor reparto en 1 o 2 lineas y el pixel_size que llena el letrero.
+    Ancho aprox. de una letra mayuscula: 0.76 * font_size px; alto de linea: 1.25."""
+    words = text.split(" ")
+    options = [[text]] + [[" ".join(words[:i]), " ".join(words[i:])] for i in range(1, len(words))]
+    best = None
+    for lines in options:
+        longest = max(len(t) for t in lines)
+        pixel = min(sh * 0.75 / (FONT_SIZE * 1.25 * len(lines)),
+                    sw * 0.88 / (0.76 * FONT_SIZE * longest))
+        if best is None or pixel > best[1]:
+            best = (lines, pixel)
+    return best
 SIGN_COLORS = [
     ("1d5f3a", "ffffff"), ("b3261e", "ffd84a"), ("1f3c88", "ffffff"),
     ("f2efe6", "7a1f2b"), ("e0a526", "2b1a0a"), ("2b2b2b", "5ce1e6"),
@@ -149,6 +169,7 @@ def main() -> None:
         sub.append(f'[sub_resource type="StandardMaterial3D" id="MatLetrero_{ci}"]\nalbedo_color = {hex_color(bg)}\nroughness = 0.6')
 
     nodes.append('[node name="FachadasAhumada" type="Node3D"]')
+    names_left = list(SIGN_NAMES)
     sign_n = 0
     box_n = 0
     for name, cx, cz, side, slots in BUILDINGS:
@@ -176,16 +197,24 @@ def main() -> None:
                 sw, sh = (bx - ax) * 1.06 + 0.06, (ay - by) * 1.1 + 0.06
                 mx, my = (ax + bx) / 2, (ay + by) / 2 + GROUND_Y
                 bg, fg = SIGN_COLORS[sign_n % len(SIGN_COLORS)]
-                text = SIGN_NAMES[sign_n % len(SIGN_NAMES)]
+                # El nombre mas largo que aun se lee bien (pixel_size >=
+                # MIN_PIXEL), para dejar los cortos a los letreros pequenos; si
+                # ninguno llega, el que mas grande se lea. Sin repetir hasta
+                # agotar la lista.
+                if not names_left:
+                    names_left = list(SIGN_NAMES)
+                legibles = [t for t in names_left if fit_text(t, sw, sh)[1] >= MIN_PIXEL]
+                if legibles:
+                    text = max(legibles, key=len)
+                else:
+                    text = max(names_left, key=lambda t: fit_text(t, sw, sh)[1])
+                names_left.remove(text)
+                lines, pixel = fit_text(text, sw, sh)
+                font_size = FONT_SIZE
                 mesh_id = f"LetreroMesh_{sign_n}"
                 sub.append(f'[sub_resource type="BoxMesh" id="{mesh_id}"]\n'
                            f'material = SubResource("MatLetrero_{sign_n % len(SIGN_COLORS)}")\n'
                            f'size = Vector3({sw:.4f}, {sh:.4f}, 0.1)')
-                # Ajusta el texto al letrero: ancho aprox. 0.6 * font_size px por letra.
-                font_size = 64
-                lines = [text] if sw / max(sh, 0.01) > 3 else text.split(" ", 1)
-                longest = max(len(t) for t in lines)
-                pixel = min(sh * 0.75 / (font_size * 1.25 * len(lines)), sw * 0.9 / (0.62 * font_size * longest))
                 sign = f"{mod}/Letrero{li + 1}"
                 nodes.append(f'[node name="Letrero{li + 1}" type="MeshInstance3D" parent="{mod}"]\n'
                              f'transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, {mx:.4f}, {my:.4f}, 0.1)\nmesh = SubResource("{mesh_id}")')
