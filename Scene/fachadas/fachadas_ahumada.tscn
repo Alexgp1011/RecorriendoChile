@@ -1,0 +1,893 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://Asset/Fachada pixel art del Edificio Plaza.png" id="1_tex_plaza"]
+[ext_resource type="Texture2D" path="res://Asset/Fachada pixel art del Café Caribe.png" id="2_tex_caribe"]
+[ext_resource type="Texture2D" path="res://Asset/Fachada histórica con tiendas Falabella y Belsport.png" id="3_tex_falabella"]
+[ext_resource type="Texture2D" path="res://Asset/Fachada modernista en pixel art.png" id="4_tex_modernista"]
+[ext_resource type="Texture2D" path="res://Asset/Fachada neoclásica con banderas chilenas.png" id="5_tex_neoclasica"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_plaza"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+albedo_texture = ExtResource("1_tex_plaza")
+roughness = 1.0
+texture_filter = 4
+uv1_scale = Vector3(0.882136, 0.957873, 1)
+uv1_offset = Vector3(0.057090, 0.006906, 0)
+
+[sub_resource type="QuadMesh" id="Quad_plaza"]
+material = SubResource("Mat_plaza")
+size = Vector2(9.1863, 13.3000)
+
+[sub_resource type="StandardMaterial3D" id="MatRelieve_plaza"]
+albedo_color = Color(0.517, 0.440, 0.380, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="Imposta_plaza"]
+material = SubResource("MatRelieve_plaza")
+size = Vector3(9.1863, 0.18, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="Mat_caribe"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+albedo_texture = ExtResource("2_tex_caribe")
+roughness = 1.0
+texture_filter = 4
+uv1_scale = Vector3(0.951872, 0.912268, 1)
+uv1_offset = Vector3(0.024064, 0.067047, 0)
+
+[sub_resource type="QuadMesh" id="Quad_caribe"]
+material = SubResource("Mat_caribe")
+size = Vector2(9.6000, 11.4966)
+
+[sub_resource type="StandardMaterial3D" id="MatRelieve_caribe"]
+albedo_color = Color(0.483, 0.433, 0.397, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="Imposta_caribe"]
+material = SubResource("MatRelieve_caribe")
+size = Vector3(9.6000, 0.18, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="Mat_falabella"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+albedo_texture = ExtResource("3_tex_falabella")
+roughness = 1.0
+texture_filter = 4
+uv1_scale = Vector3(0.972376, 0.900552, 1)
+uv1_offset = Vector3(0.014733, 0.062845, 0)
+
+[sub_resource type="QuadMesh" id="Quad_falabella"]
+material = SubResource("Mat_falabella")
+size = Vector2(9.6000, 11.8545)
+
+[sub_resource type="StandardMaterial3D" id="MatRelieve_falabella"]
+albedo_color = Color(0.527, 0.437, 0.367, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="Imposta_falabella"]
+material = SubResource("MatRelieve_falabella")
+size = Vector3(9.6000, 0.18, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="Mat_modernista"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+albedo_texture = ExtResource("4_tex_modernista")
+roughness = 1.0
+texture_filter = 4
+uv1_scale = Vector3(0.930664, 0.866536, 1)
+uv1_offset = Vector3(0.034180, 0.083333, 0)
+
+[sub_resource type="QuadMesh" id="Quad_modernista"]
+material = SubResource("Mat_modernista")
+size = Vector2(9.5228, 13.3000)
+
+[sub_resource type="StandardMaterial3D" id="MatRelieve_modernista"]
+albedo_color = Color(0.260, 0.340, 0.370, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="Imposta_modernista"]
+material = SubResource("MatRelieve_modernista")
+size = Vector3(9.5228, 0.18, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="Mat_neoclasica"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+albedo_texture = ExtResource("5_tex_neoclasica")
+roughness = 1.0
+texture_filter = 4
+uv1_scale = Vector3(0.993761, 0.833809, 1)
+uv1_offset = Vector3(0.003565, 0.127675, 0)
+
+[sub_resource type="QuadMesh" id="Quad_neoclasica"]
+material = SubResource("Mat_neoclasica")
+size = Vector2(9.6000, 10.0649)
+
+[sub_resource type="StandardMaterial3D" id="MatRelieve_neoclasica"]
+albedo_color = Color(0.467, 0.383, 0.317, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="Imposta_neoclasica"]
+material = SubResource("MatRelieve_neoclasica")
+size = Vector3(9.6000, 0.18, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="MatPilastra"]
+albedo_color = Color(0.55, 0.5, 0.46, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="Pilastra"]
+material = SubResource("MatPilastra")
+size = Vector3(0.4, 14, 0.35)
+
+[sub_resource type="StandardMaterial3D" id="MatCornisa"]
+albedo_color = Color(0.62, 0.58, 0.53, 1)
+roughness = 0.95
+
+[sub_resource type="BoxMesh" id="Cornisa"]
+material = SubResource("MatCornisa")
+size = Vector3(10.2, 0.4, 0.55)
+
+[sub_resource type="StandardMaterial3D" id="MatLetrero_0"]
+albedo_color = Color(0.114, 0.373, 0.227, 1)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatLetrero_1"]
+albedo_color = Color(0.702, 0.149, 0.118, 1)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatLetrero_2"]
+albedo_color = Color(0.122, 0.235, 0.533, 1)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatLetrero_3"]
+albedo_color = Color(0.949, 0.937, 0.902, 1)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatLetrero_4"]
+albedo_color = Color(0.878, 0.647, 0.149, 1)
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="MatLetrero_5"]
+albedo_color = Color(0.169, 0.169, 0.169, 1)
+roughness = 0.6
+
+[sub_resource type="BoxMesh" id="LetreroMesh_0"]
+material = SubResource("MatLetrero_0")
+size = Vector3(0.9431, 0.9546, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_1"]
+material = SubResource("MatLetrero_1")
+size = Vector3(0.9851, 0.9546, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_2"]
+material = SubResource("MatLetrero_2")
+size = Vector3(2.4780, 0.8891, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_3"]
+material = SubResource("MatLetrero_3")
+size = Vector3(1.3636, 0.8891, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_4"]
+material = SubResource("MatLetrero_4")
+size = Vector3(3.5713, 0.8455, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_5"]
+material = SubResource("MatLetrero_5")
+size = Vector3(1.6858, 0.6147, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_6"]
+material = SubResource("MatLetrero_0")
+size = Vector3(1.7787, 0.6147, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_7"]
+material = SubResource("MatLetrero_1")
+size = Vector3(1.7322, 0.6147, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_8"]
+material = SubResource("MatLetrero_2")
+size = Vector3(1.4727, 1.2086, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_9"]
+material = SubResource("MatLetrero_3")
+size = Vector3(1.5490, 0.4957, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_10"]
+material = SubResource("MatLetrero_4")
+size = Vector3(2.9999, 0.3967, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_11"]
+material = SubResource("MatLetrero_5")
+size = Vector3(3.4390, 0.6145, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_12"]
+material = SubResource("MatLetrero_0")
+size = Vector3(1.9138, 0.7219, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_13"]
+material = SubResource("MatLetrero_1")
+size = Vector3(1.6547, 1.6528, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_14"]
+material = SubResource("MatLetrero_2")
+size = Vector3(0.9431, 0.9546, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_15"]
+material = SubResource("MatLetrero_3")
+size = Vector3(0.9851, 0.9546, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_16"]
+material = SubResource("MatLetrero_4")
+size = Vector3(2.4780, 0.8891, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_17"]
+material = SubResource("MatLetrero_5")
+size = Vector3(1.3636, 0.8891, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_18"]
+material = SubResource("MatLetrero_0")
+size = Vector3(3.5713, 0.8455, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_19"]
+material = SubResource("MatLetrero_1")
+size = Vector3(1.6858, 0.6147, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_20"]
+material = SubResource("MatLetrero_2")
+size = Vector3(1.7787, 0.6147, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_21"]
+material = SubResource("MatLetrero_3")
+size = Vector3(1.7322, 0.6147, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_22"]
+material = SubResource("MatLetrero_4")
+size = Vector3(1.4727, 1.2086, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_23"]
+material = SubResource("MatLetrero_5")
+size = Vector3(1.5490, 0.4957, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_24"]
+material = SubResource("MatLetrero_0")
+size = Vector3(2.9999, 0.3967, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_25"]
+material = SubResource("MatLetrero_1")
+size = Vector3(3.4390, 0.6145, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_26"]
+material = SubResource("MatLetrero_2")
+size = Vector3(1.9138, 0.7219, 0.1)
+
+[sub_resource type="BoxMesh" id="LetreroMesh_27"]
+material = SubResource("MatLetrero_3")
+size = Vector3(1.6547, 1.6528, 0.1)
+
+[node name="FachadasAhumada" type="Node3D"]
+
+[node name="Edificio_Izq1" type="Node3D" parent="."]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9.0, 0, -12)
+
+[node name="Pilastra0" type="MeshInstance3D" parent="Edificio_Izq1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra1" type="MeshInstance3D" parent="Edificio_Izq1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra2" type="MeshInstance3D" parent="Edificio_Izq1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Modulo1" type="Node3D" parent="Edificio_Izq1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6600, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_plaza")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1310, 0.11)
+mesh = SubResource("Imposta_plaza")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8669, 2.6054, 0.1)
+mesh = SubResource("LetreroMesh_0")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00267
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "FARMACIA\nEL ROBLE"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4271, 2.6054, 0.1)
+mesh = SubResource("LetreroMesh_1")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00248
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 0.847, 0.290, 1)
+outline_size = 0
+text = "SANGUCHES\nDON TITO"
+font_size = 64
+
+[node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0553, 1.7227, 0.1)
+mesh = SubResource("LetreroMesh_2")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00417
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "HELADOS\nNEVADA"
+font_size = 64
+
+[node name="Letrero4" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0886, 1.6830, 0.1)
+mesh = SubResource("LetreroMesh_3")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00344
+double_sided = false
+texture_filter = 0
+modulate = Color(0.478, 0.122, 0.169, 1)
+outline_size = 0
+text = "COMPLETOS\nLA PICADA"
+font_size = 64
+
+[node name="Letrero5" type="MeshInstance3D" parent="Edificio_Izq1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5185, 1.7029, 0.1)
+mesh = SubResource("LetreroMesh_4")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo1/Letrero5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00506
+double_sided = false
+texture_filter = 0
+modulate = Color(0.169, 0.102, 0.039, 1)
+outline_size = 0
+text = "TELEFONIA CONDOR"
+font_size = 64
+
+[node name="Modulo2" type="Node3D" parent="Edificio_Izq1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6600, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_modernista")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2312, 0.11)
+mesh = SubResource("Imposta_modernista")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3446, 1.9485, 0.1)
+mesh = SubResource("LetreroMesh_5")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo2/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00288
+double_sided = false
+texture_filter = 0
+modulate = Color(0.361, 0.882, 0.902, 1)
+outline_size = 0
+text = "CELULARES\nAUSTRAL"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0536, 1.9485, 0.1)
+mesh = SubResource("LetreroMesh_6")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo2/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00288
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "BANCO\nCORDILLERA"
+font_size = 64
+
+[node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7846, 1.9485, 0.1)
+mesh = SubResource("LetreroMesh_7")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq1/Modulo2/Letrero3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00288
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 0.847, 0.290, 1)
+outline_size = 0
+text = "ZAPATILLAS\nVELOZ"
+font_size = 64
+
+[node name="Edificio_Izq2" type="Node3D" parent="."]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9.0, 0, -35)
+
+[node name="Pilastra3" type="MeshInstance3D" parent="Edificio_Izq2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra4" type="MeshInstance3D" parent="Edificio_Izq2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra5" type="MeshInstance3D" parent="Edificio_Izq2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Modulo1" type="Node3D" parent="Edificio_Izq2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.7583, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_caribe")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3500, 0.11)
+mesh = SubResource("Imposta_caribe")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6920, 2.3778, 0.1)
+mesh = SubResource("LetreroMesh_8")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00477
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "TIENDAS\nMAPOCHO"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7100, 1.4956, 0.1)
+mesh = SubResource("LetreroMesh_9")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00195
+double_sided = false
+texture_filter = 0
+modulate = Color(0.478, 0.122, 0.169, 1)
+outline_size = 0
+text = "LIBRERIA EL PUENTE"
+font_size = 64
+
+[node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9356, 2.7829, 0.1)
+mesh = SubResource("LetreroMesh_10")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00372
+double_sided = false
+texture_filter = 0
+modulate = Color(0.169, 0.102, 0.039, 1)
+outline_size = 0
+text = "OPTICA LA LUPA"
+font_size = 64
+
+[node name="Letrero4" type="MeshInstance3D" parent="Edificio_Izq2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0887, 1.7297, 0.1)
+mesh = SubResource("LetreroMesh_11")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq2/Modulo1/Letrero4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00557
+double_sided = false
+texture_filter = 0
+modulate = Color(0.361, 0.882, 0.902, 1)
+outline_size = 0
+text = "CAMBIO ALAMEDA"
+font_size = 64
+
+[node name="Modulo2" type="Node3D" parent="Edificio_Izq2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Izq2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.0425, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_neoclasica")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Izq2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Izq2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8217, 0.11)
+mesh = SubResource("Imposta_neoclasica")
+
+[node name="Edificio_Izq3" type="Node3D" parent="."]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9.0, 0, -59)
+
+[node name="Pilastra6" type="MeshInstance3D" parent="Edificio_Izq3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra7" type="MeshInstance3D" parent="Edificio_Izq3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra8" type="MeshInstance3D" parent="Edificio_Izq3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Modulo1" type="Node3D" parent="Edificio_Izq3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Izq3/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9373, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_falabella")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Izq3/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Izq3/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.0038, 0.11)
+mesh = SubResource("Imposta_falabella")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Izq3/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2885, 1.8976, 0.1)
+mesh = SubResource("LetreroMesh_12")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo1/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00338
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "JUGOS\nLA FRUTA"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq3/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5169, 2.9789, 0.1)
+mesh = SubResource("LetreroMesh_13")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo1/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00375
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 0.847, 0.290, 1)
+outline_size = 0
+text = "PAQUETERIA\nEL SUR"
+font_size = 64
+
+[node name="Modulo2" type="Node3D" parent="Edificio_Izq3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6600, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_plaza")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1310, 0.11)
+mesh = SubResource("Imposta_plaza")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8669, 2.6054, 0.1)
+mesh = SubResource("LetreroMesh_14")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00194
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "BAZAR\nSANTA LUCIA"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4271, 2.6054, 0.1)
+mesh = SubResource("LetreroMesh_15")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00248
+double_sided = false
+texture_filter = 0
+modulate = Color(0.478, 0.122, 0.169, 1)
+outline_size = 0
+text = "RELOJERIA\nEL TIEMPO"
+font_size = 64
+
+[node name="Letrero3" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0553, 1.7227, 0.1)
+mesh = SubResource("LetreroMesh_16")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00417
+double_sided = false
+texture_filter = 0
+modulate = Color(0.169, 0.102, 0.039, 1)
+outline_size = 0
+text = "SEGUROS\nACONCAGUA"
+font_size = 64
+
+[node name="Letrero4" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0886, 1.6830, 0.1)
+mesh = SubResource("LetreroMesh_17")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00309
+double_sided = false
+texture_filter = 0
+modulate = Color(0.361, 0.882, 0.902, 1)
+outline_size = 0
+text = "PERFUMERIA\nAROMA"
+font_size = 64
+
+[node name="Letrero5" type="MeshInstance3D" parent="Edificio_Izq3/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5185, 1.7029, 0.1)
+mesh = SubResource("LetreroMesh_18")
+
+[node name="Texto" type="Label3D" parent="Edificio_Izq3/Modulo2/Letrero5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00540
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "REPUESTOS ANDES"
+font_size = 64
+
+[node name="Edificio_Der1" type="Node3D" parent="."]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9.0, 0, -12)
+
+[node name="Pilastra9" type="MeshInstance3D" parent="Edificio_Der1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra10" type="MeshInstance3D" parent="Edificio_Der1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra11" type="MeshInstance3D" parent="Edificio_Der1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Modulo1" type="Node3D" parent="Edificio_Der1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6600, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_modernista")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2312, 0.11)
+mesh = SubResource("Imposta_modernista")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3446, 1.9485, 0.1)
+mesh = SubResource("LetreroMesh_19")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo1/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00288
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 0.847, 0.290, 1)
+outline_size = 0
+text = "FARMACIA\nEL ROBLE"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0536, 1.9485, 0.1)
+mesh = SubResource("LetreroMesh_20")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo1/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00288
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "SANGUCHES\nDON TITO"
+font_size = 64
+
+[node name="Letrero3" type="MeshInstance3D" parent="Edificio_Der1/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7846, 1.9485, 0.1)
+mesh = SubResource("LetreroMesh_21")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo1/Letrero3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00288
+double_sided = false
+texture_filter = 0
+modulate = Color(0.478, 0.122, 0.169, 1)
+outline_size = 0
+text = "HELADOS\nNEVADA"
+font_size = 64
+
+[node name="Modulo2" type="Node3D" parent="Edificio_Der1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.7583, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_caribe")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3500, 0.11)
+mesh = SubResource("Imposta_caribe")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6920, 2.3778, 0.1)
+mesh = SubResource("LetreroMesh_22")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00371
+double_sided = false
+texture_filter = 0
+modulate = Color(0.169, 0.102, 0.039, 1)
+outline_size = 0
+text = "COMPLETOS\nLA PICADA"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7100, 1.4956, 0.1)
+mesh = SubResource("LetreroMesh_23")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00220
+double_sided = false
+texture_filter = 0
+modulate = Color(0.361, 0.882, 0.902, 1)
+outline_size = 0
+text = "TELEFONIA CONDOR"
+font_size = 64
+
+[node name="Letrero3" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9356, 2.7829, 0.1)
+mesh = SubResource("LetreroMesh_24")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00372
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "CELULARES AUSTRAL"
+font_size = 64
+
+[node name="Letrero4" type="MeshInstance3D" parent="Edificio_Der1/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0887, 1.7297, 0.1)
+mesh = SubResource("LetreroMesh_25")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der1/Modulo2/Letrero4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00488
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 0.847, 0.290, 1)
+outline_size = 0
+text = "BANCO CORDILLERA"
+font_size = 64
+
+[node name="Edificio_Der2" type="Node3D" parent="."]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9.0, 0, -73)
+
+[node name="Pilastra12" type="MeshInstance3D" parent="Edificio_Der2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra13" type="MeshInstance3D" parent="Edificio_Der2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Pilastra14" type="MeshInstance3D" parent="Edificio_Der2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 7, 0.175)
+mesh = SubResource("Pilastra")
+
+[node name="Modulo1" type="Node3D" parent="Edificio_Der2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Der2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.0425, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_neoclasica")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Der2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Der2/Modulo1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8217, 0.11)
+mesh = SubResource("Imposta_neoclasica")
+
+[node name="Modulo2" type="Node3D" parent="Edificio_Der2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Imagen" type="MeshInstance3D" parent="Edificio_Der2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9373, 0.04)
+cast_shadow = 0
+mesh = SubResource("Quad_falabella")
+
+[node name="Cornisa" type="MeshInstance3D" parent="Edificio_Der2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.8, 0.275)
+mesh = SubResource("Cornisa")
+
+[node name="Imposta" type="MeshInstance3D" parent="Edificio_Der2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.0038, 0.11)
+mesh = SubResource("Imposta_falabella")
+
+[node name="Letrero1" type="MeshInstance3D" parent="Edificio_Der2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2885, 1.8976, 0.1)
+mesh = SubResource("LetreroMesh_26")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der2/Modulo2/Letrero1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00338
+double_sided = false
+texture_filter = 0
+modulate = Color(1.000, 1.000, 1.000, 1)
+outline_size = 0
+text = "ZAPATILLAS\nVELOZ"
+font_size = 64
+
+[node name="Letrero2" type="MeshInstance3D" parent="Edificio_Der2/Modulo2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5169, 2.9789, 0.1)
+mesh = SubResource("LetreroMesh_27")
+
+[node name="Texto" type="Label3D" parent="Edificio_Der2/Modulo2/Letrero2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.052)
+pixel_size = 0.00536
+double_sided = false
+texture_filter = 0
+modulate = Color(0.478, 0.122, 0.169, 1)
+outline_size = 0
+text = "TIENDAS\nMAPOCHO"
+font_size = 64

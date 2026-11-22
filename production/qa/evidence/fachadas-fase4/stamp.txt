@@ -1,0 +1,4 @@
+Reviewed-Content-Hash: Scene/world.tscn 2a1e2c8e8871740892ded5a4689043d66004dd40
+Reviewed-Content-Hash: Scene/mobiliario/farol.tscn a7c3131193732b2b466c713869a2e43c618d02ec
+Reviewed-Content-Hash: Scene/mobiliario/quiosco.tscn 826faab66b6a4a6ce84e491b694234e00f1f5ab8
+Reviewed-Content-Hash: Scene/mobiliario/mobiliario_ahumada.tscn cb68ded969699fcaf648319996ae58d551511d31

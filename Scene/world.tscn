@@ -7,22 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://bnhd4118tmrmm" path="res://Asset/Pavimento Pixelado de Bandas Ondulantes.png" id="3_opfkj"]
 [ext_resource type="Script" uid="uid://ddxw7s2n1c1w5" path="res://Scripts/zona_objetivo.gd" id="4_h7cfj"]
 [ext_resource type="Script" uid="uid://rrhnkgurcp3u" path="res://Scripts/Detectarzona.gd" id="4_scul4"]
-[ext_resource type="Texture2D" uid="uid://nqdertoubexa" path="res://Asset/Fachada pixel art del Edificio Plaza.png" id="4_wua5g"]
 [ext_resource type="Script" uid="uid://cqkfdas0adad0" path="res://Scripts/vendedor_balines.gd" id="4_y56vo"]
-[ext_resource type="Texture2D" uid="uid://cwullmt4aulxp" path="res://Asset/Fachada pixel art del Café Caribe.png" id="5_7lbl5"]
 [ext_resource type="PackedScene" uid="uid://c5hbas3aaqe8a" path="res://Scene/manifestante.tscn" id="5_pcvp0"]
 [ext_resource type="PackedScene" uid="uid://bqnxosfrk4vg" path="res://Scene/policia.tscn" id="6_37axr"]
-[ext_resource type="Texture2D" uid="uid://bijoy5a170cou" path="res://Asset/Fachada histórica con tiendas Falabella y Belsport.png" id="6_ptfde"]
 [ext_resource type="Script" uid="uid://d3y4vd1omhxfr" path="res://Scripts/don_palomo.gd" id="7_6a5p4"]
-[ext_resource type="Texture2D" uid="uid://3cj7gv3k72c5" path="res://Asset/Fachada modernista en pixel art.png" id="7_wua5g"]
 [ext_resource type="PackedScene" uid="uid://go35cu7jybth" path="res://Scene/puesto_pepito.tscn" id="8_ddf65"]
 [ext_resource type="PackedScene" uid="uid://b20nxdcck0bes" path="res://Scene/excremento_palomo.tscn" id="8_nka0b"]
-[ext_resource type="Texture2D" uid="uid://b1tlrdbqlonhi" path="res://Asset/Fachada neoclásica con banderas chilenas.png" id="8_wua5g"]
 [ext_resource type="Script" uid="uid://c4s2tyc7h4cj6" path="res://Scripts/invocador_palomas.gd" id="9_0gfnl"]
 [ext_resource type="Texture2D" uid="uid://cundwl5tf4tto" path="res://Asset/Sprite de Rey Palomo en Pixel Art.png" id="9_s81y4"]
 [ext_resource type="Script" uid="uid://c1gmanc7lric1" path="res://Scripts/rey_palomo_visual.gd" id="10_bfvnh"]
 [ext_resource type="PackedScene" uid="uid://psoshqjuae8e" path="res://Scene/paloma_pequena.tscn" id="10_kufhj"]
 [ext_resource type="Script" uid="uid://dg1isiidfucwb" path="res://Scripts/activador_evento_calle.gd" id="15_a6mvv"]
+[ext_resource type="PackedScene" path="res://Scene/fachadas/fachadas_ahumada.tscn" id="20_fachadas"]
+[ext_resource type="PackedScene" path="res://Scene/mobiliario/mobiliario_ahumada.tscn" id="21_mobiliario"]
 
 [sub_resource type="GDScript" id="GDScript_dlwip"]
 script/source = "extends Node3D
@@ -33,12 +30,14 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("3_opfkj")
+texture_filter = 4
 uv1_scale = Vector3(8, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mti6b"]
 transparency = 1
 shading_mode = 0
 albedo_texture = ExtResource("3_opfkj")
+texture_filter = 4
 uv1_scale = Vector3(1, 8, 1)
 uv2_scale = Vector3(0, 0, 0)
 
@@ -85,9 +84,10 @@ material = SubResource("StandardMaterial3D_6vnta")
 size = Vector3(0.4, 0.25, 26.2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8qnq"]
-albedo_color = Color(0.21568628, 0.43137255, 0.50980395, 1)
-metallic = 0.15
-roughness = 0.35
+transparency = 1
+albedo_color = Color(0.36, 0.62, 0.72, 0.45)
+metallic = 0.3
+roughness = 0.08
 
 [sub_resource type="BoxMesh" id="BoxMesh_6vnta"]
 material = SubResource("StandardMaterial3D_r8qnq")
@@ -95,6 +95,8 @@ size = Vector3(0.06, 1.7, 3.4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvsax"]
 albedo_color = Color(0.6666667, 0.7019608, 0.7137255, 1)
+metallic = 0.7
+roughness = 0.35
 
 [sub_resource type="BoxMesh" id="BoxMesh_r8qnq"]
 material = SubResource("StandardMaterial3D_yvsax")
@@ -114,7 +116,12 @@ albedo_color = Color(0.1882353, 0.22352941, 0.25490198, 1)
 material = SubResource("StandardMaterial3D_wua5g")
 size = Vector3(0.2, 0.75, 7.6)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_panel_letrero"]
+albedo_color = Color(0.05, 0.07, 0.09, 1)
+roughness = 0.5
+
 [sub_resource type="BoxMesh" id="BoxMesh_wua5g"]
+material = SubResource("StandardMaterial3D_panel_letrero")
 size = Vector3(0.06, 0.58, 7.2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48hbk"]
@@ -126,6 +133,9 @@ size = Vector3(1.0459961, 0.18, 7.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bx1ot"]
 albedo_color = Color(0.25882354, 0.84705883, 0.8745098, 1)
+emission_enabled = true
+emission = Color(0.25882354, 0.84705883, 0.8745098, 1)
+emission_energy_multiplier = 3.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_48hbk"]
 material = SubResource("StandardMaterial3D_bx1ot")
@@ -139,7 +149,9 @@ material = SubResource("StandardMaterial3D_15ghf")
 size = Vector3(0.14, 3.5, 5.9726563)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxb74"]
-albedo_color = Color(0.21568628, 0.43137255, 0.50980395, 1)
+albedo_color = Color(0.12, 0.2, 0.24, 1)
+roughness = 0.15
+metallic = 0.4
 
 [sub_resource type="BoxMesh" id="BoxMesh_15ghf"]
 material = SubResource("StandardMaterial3D_dxb74")
@@ -153,7 +165,9 @@ material = SubResource("StandardMaterial3D_aodgb")
 size = Vector3(0.14, 3.5, 11.949219)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4p0s"]
-albedo_color = Color(0.32941177, 0.56078434, 0.627451, 1)
+albedo_color = Color(0.12, 0.2, 0.24, 1)
+roughness = 0.15
+metallic = 0.4
 
 [sub_resource type="BoxMesh" id="BoxMesh_aodgb"]
 material = SubResource("StandardMaterial3D_m4p0s")
@@ -396,8 +410,25 @@ top_radius = 0.03
 bottom_radius = 0.03
 height = 1.4
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cielo"]
+sky_top_color = Color(0.32, 0.48, 0.7, 1)
+sky_horizon_color = Color(0.76, 0.74, 0.69, 1)
+ground_bottom_color = Color(0.22, 0.2, 0.18, 1)
+ground_horizon_color = Color(0.76, 0.74, 0.69, 1)
+
+[sub_resource type="Sky" id="Sky_cielo"]
+sky_material = SubResource("ProceduralSkyMaterial_cielo")
+
 [sub_resource type="Environment" id="Environment_4kxuq"]
-background_mode = 1
+background_mode = 2
+sky = SubResource("Sky_cielo")
+ambient_light_source = 3
+ambient_light_energy = 0.5
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.74, 0.72, 0.67, 1)
+fog_density = 0.004
+fog_sky_affect = 0.4
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4kxuq"]
 vertices = PackedVector3Array(-9.5, 0.5, -81.25, 8.5, 0.5, -81.25, 8.5, 0.5, -83.25, 9.5, 0.5, -83.5, 9.5, 0.5, -101.5, -9.5, 0.5, -101.5, 9.5, 14.5, -82.5, 9.5, 14.5, -63.5, 18.5, 14.5, -63.5, 18.5, 14.5, -82.5, -9.5, 0.5, -69.5, -8.25, 0.5, -69.25, 8.5, 0.5, -68, -8.25, 0.5, -67.75, -18.5, 14.5, -68.5, -18.5, 14.5, -49.5, -9.5, 14.5, -49.5, -9.5, 14.5, -68.5, -8.25, 0.5, -63.75, 8.5, 0.5, -64, 9.5, 0.5, -57.75, 9.5, 0.5, -62.25, 8.5, 0.5, -62.5, 8.25, 0.5, -57.25, -8.25, 0.5, -55.25, 8.25, 0.5, -55.25, 10, 0.5, -37.5, 12.25, 0.5, -37, 12.5, 0.5, -39, 10, 0.5, -44.25, 9, 0.5, -49.25, 9, 0.5, -44.5, 10, 0.5, -49.75, 16.5, 0.5, -39, 16.25, 0.5, -49.75, 12.25, 0.5, -50, 12.25, 0.5, -56, 10, 0.5, -56, 25.25, 4.5, -47.5, 25, 4.5, -48, 23, 4.5, -48, 22.75, 4.5, -47.5, 23.75, 4.5, -39, 21.5, 4.5, -47.75, 18, 4.5, -49.75, 12.5, 4.5, -49.75, 12.5, 4.5, -39, 10, 4.5, -37.5, 12.25, 4.5, -37, 12.25, 4.5, -56, 10, 4.5, -56, 24, 4.5, -37, 26.25, 4.5, -37.5, 26.25, 4.5, -47.5, 21.5, 4.5, -56, 18.25, 4.5, -56, 21, 8.5, -37.75, 20.75, 8.5, -37.75, 19.25, 8.5, -37.5, 19.25, 8.5, -35.75, 22.5, 8.5, -35.75, 22.5, 8.5, -37.5, 25, 8.5, -47.75, 25, 4.5, -56, 23, 4.5, -56, 23, 8.5, -47.75, 21.75, 8.5, -47.5, 18, 8.5, -49.75, 12.5, 8.5, -49.75, 12.5, 8.5, -39, 20.5, 8.5, -39, 26.25, 8.5, -47.5, 23.75, 8.5, -39, 26.25, 8.5, -37.5, 21.25, 8.5, -39, 21.5, 8.5, -56, 18.25, 8.5, -56, 10, 8.5, -37.5, 12.25, 8.5, -37, 12.25, 8.5, -56, 10, 8.5, -56, 24, 8.5, -37, 25.25, 0.75, -55.5, 26.25, 0.5, -55.5, 26.25, 0.5, -56, 18.25, 0.5, -52, 22, 0.5, -52.25, 22, 0.5, -55.5, 18.25, 0.5, -56, 25, 1, -55, 23, 0.75, -55.5, -8.25, 0.5, -51.5, 8.25, 0.5, -51.5, 13.5, 0.5, -52.75, 13.5, 0.5, -51.25, 16.75, 0.5, -51.25, 16.75, 0.5, -52.75, 13.5, 4.5, -52.75, 13.5, 4.5, -51.25, 16.75, 4.5, -51.25, 16.75, 4.5, -52.75, 13.5, 8.5, -52.75, 13.5, 8.5, -51.25, 16.75, 8.5, -51.25, 16.75, 8.5, -52.75, 23.75, 0.5, -39, 24, 0.5, -37, 26.25, 0.5, -37.5, 26.25, 0.5, -50.75, 22.25, 0.5, -50.5, 18.25, 0.5, -50, -9.5, 0.5, -48.25, -9.5, 0.5, -45.5, -8.25, 0.5, -45.25, -8.25, 0.5, -48.75, -8.25, 0.5, -42.25, 8.25, 0.5, -42.25, 8.25, 0.5, -44.25, 8.25, 0.5, -49.5, -18.5, 14.5, -44.5, -18.5, 14.5, -25.5, -9.5, 14.5, -25.5, -9.5, 14.5, -44.5, -8.25, 0.5, -32.5, 8.25, 0.5, -32.5, 13.5, 0.5, -37.5, 13.5, 0.5, -35.75, 16.75, 0.5, -35.75, 16.75, 0.5, -37.5, 13.5, 4.5, -37.5, 13.5, 4.5, -35.75, 16.75, 4.5, -35.75, 16.75, 4.5, -37.5, 13.5, 8.5, -37.5, 13.5, 8.5, -35.75, 16.75, 8.5, -35.75, 16.75, 8.5, -37.5, 19.25, 0.5, -37.5, 19.25, 0.5, -35.5, 22.75, 0.5, -35.75, 22.75, 0.5, -37.5, 19.25, 4.5, -37.5, 19.25, 4.5, -35.5, 22.75, 4.5, -35.75, 22.75, 4.5, -37.5, 23.75, 0.5, -32.5, 26.25, 0.5, -31.75, 12.5, 0.5, -32.5, 10, 0.5, -31.75, 23.75, 4.5, -32.5, 26.25, 4.5, -31.75, 12.5, 4.5, -32.5, 10, 4.5, -31.75, 23.75, 8.5, -32.5, 26.25, 8.5, -31.75, 12.5, 8.5, -32.5, 10, 8.5, -31.75, -9.5, 0.5, -24.25, -9.5, 0.5, -22.5, -8.25, 0.5, -22.25, 8.5, 0.5, -20.5, -8.25, 0.5, -24.75, 8.25, 0.5, -30.5, 8.5, 0.5, -22.25, 9.5, 0.5, -22.5, 9.5, 0.5, -30, -8.25, 0.5, -20.5, -18.5, 14.5, -21.5, -18.5, 14.5, -2.5, -9.5, 14.5, -2.5, -9.5, 14.5, -21.5, 9.5, 14.5, -21.5, 9.5, 14.5, -2.5, 18.5, 14.5, -2.5, 18.5, 14.5, -21.5, 1, 0.5, -0.5, 2, 0.5, -0.5, 8.5, 0.5, -1.75, -8.25, 0.5, -2, 1.5, 0.5, 7.5, 1.5, 0.5, 0.75, 0.5, 0.5, 0.5, -8.75, 0.5, -1.25, -9.5, 0.5, -1.25, -9.5, 0.5, 7.5, 0.5, 0.5, -0.25, 2.5, 0.5, -0.25, 8.75, 0.5, -1.25, 2.5, 0.5, 0.5, 9.5, 0.5, -1.25, 9.5, 0.5, 7.5)
@@ -407,6 +438,43 @@ geometry_source_group_name = &"geometria_navegacion"
 agent_height = 1.8
 agent_radius = 0.4
 agent_max_climb = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D"]
+albedo_color = Color(0.547, 0.466, 0.402, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D2"]
+albedo_color = Color(0.512, 0.459, 0.420, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D4"]
+albedo_color = Color(0.558, 0.462, 0.388, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D3"]
+albedo_color = Color(0.424, 0.431, 0.424, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D5"]
+albedo_color = Color(0.494, 0.406, 0.335, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_revestimiento_galeria"]
+albedo_color = Color(0.28, 0.31, 0.34, 1)
+metallic = 0.2
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umbral"]
+albedo_color = Color(0.18, 0.19, 0.21, 1)
+roughness = 0.4
+
+[sub_resource type="BoxMesh" id="BoxMesh_neon_marquesina"]
+material = SubResource("StandardMaterial3D_bx1ot")
+size = Vector3(0.05, 0.05, 7.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_umbral"]
+material = SubResource("StandardMaterial3D_umbral")
+size = Vector3(2.5, 0.04, 6.2)
 
 [node name="World" type="Node3D" unique_id=606234663]
 script = SubResource("GDScript_dlwip")
@@ -441,49 +509,31 @@ mesh = SubResource("QuadMesh_4kxuq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 7, -12)
 use_collision = true
 size = Vector3(10, 14, 20)
-
-[node name="DecoracionFachada" type="Node3D" parent="Escenario/Edificios/CSGBox3D" unique_id=760709887]
-
-[node name="Sprite3D" type="Sprite3D" parent="Escenario/Edificios/CSGBox3D/DecoracionFachada" unique_id=849311798]
-transform = Transform3D(-0.018319814, 0, 1.8360975, 0, 1.4532253, 0, -2.0567038, 0, -0.016354788, 5.1625366, 2.5440063, 0.05117798)
-transparent = false
-texture_filter = 4
-texture = ExtResource("4_wua5g")
+material = SubResource("StandardMaterial3D_estuco_CSGBox3D")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Escenario/Edificios" unique_id=839247336]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 7, -35)
 use_collision = true
 size = Vector3(10, 14, 20)
-
-[node name="Sprite3D" type="Sprite3D" parent="Escenario/Edificios/CSGBox3D2" unique_id=1308598968]
-transform = Transform3D(-9.254131e-08, 0, 0.8672427, 0, 1.2738135, 0, -2.1170983, 0, -3.7908382e-08, 5.0026245, 1.5644531, -0.8387451)
-texture = ExtResource("5_7lbl5")
+material = SubResource("StandardMaterial3D_estuco_CSGBox3D2")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Escenario/Edificios" unique_id=1337987091]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 7, -59)
+use_collision = true
 size = Vector3(10, 14, 20)
-
-[node name="Sprite3D" type="Sprite3D" parent="Escenario/Edificios/CSGBox3D4" unique_id=236517496]
-transform = Transform3D(-8.297267e-08, 0, 1, 0, 1.081244, 0, -1.8981935, 0, -4.371139e-08, 5.0009155, 0.2154541, -0.2828369)
-texture = ExtResource("6_ptfde")
+material = SubResource("StandardMaterial3D_estuco_CSGBox3D4")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Escenario/Edificios" unique_id=1578130947]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 7, -12)
 use_collision = true
 size = Vector3(10, 14, 20)
-
-[node name="Sprite3D" type="Sprite3D" parent="Escenario/Edificios/CSGBox3D3" unique_id=920287151]
-transform = Transform3D(-9.275676e-08, 0, 1.2367983, 0, 1.5726967, 0, -2.1220274, 0, -5.4062166e-08, -5.1032715, 3.9904785, 0.043136597)
-texture = ExtResource("7_wua5g")
+material = SubResource("StandardMaterial3D_estuco_CSGBox3D3")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Escenario/Edificios" unique_id=1441477117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 7, -73)
 use_collision = true
 size = Vector3(10, 14, 20)
-
-[node name="Sprite3D" type="Sprite3D" parent="Escenario/Edificios/CSGBox3D5" unique_id=1695683296]
-transform = Transform3D(-8.007313e-08, 0, 0.9060327, 0, 1.2998928, 0, -1.8318597, 0, -3.9603947e-08, -5.14209, 1.4912109, 0.08227539)
-texture = ExtResource("8_wua5g")
+material = SubResource("StandardMaterial3D_estuco_CSGBox3D5")
 
 [node name="Galeriacomercial" type="Node3D" parent="Escenario" unique_id=550881835]
 
@@ -551,16 +601,19 @@ size = Vector3(18, 12, 0.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 8, -44)
 use_collision = true
 size = Vector3(0.5, 8, 26)
+material = SubResource("StandardMaterial3D_revestimiento_galeria")
 
 [node name="FachadabajaA" type="CSGBox3D" parent="Escenario/Galeriacomercial" unique_id=263206983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, -53.5)
 use_collision = true
 size = Vector3(0.5, 4, 7)
+material = SubResource("StandardMaterial3D_revestimiento_galeria")
 
 [node name="FachadabajaB" type="CSGBox3D" parent="Escenario/Galeriacomercial" unique_id=144222078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, -37.5)
 use_collision = true
 size = Vector3(0.5, 4, 13)
+material = SubResource("StandardMaterial3D_revestimiento_galeria")
 
 [node name="Escaleras" type="Node3D" parent="Escenario/Galeriacomercial" unique_id=439654015]
 
@@ -827,18 +880,30 @@ pixel_size = 0.009
 modulate = Color(0.25882354, 0.84705883, 0.8745098, 1)
 text = "EUROCENTRO"
 font_size = 64
+texture_filter = 0
+outline_size = 10
+outline_modulate = Color(0.02, 0.06, 0.08, 1)
+
+[node name="NeonMarquesina" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49, 3.05, -2.97)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_neon_marquesina")
+
+[node name="UmbralEntrada" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.03, -2.95)
+mesh = SubResource("BoxMesh_umbral")
 
 [node name="LucesExterior" type="Node3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal" unique_id=1981512693]
 
 [node name="LuzIzquierda" type="OmniLight3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal/LucesExterior" unique_id=116603316]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1977296, 3.0082765, -6.2089996)
 light_color = Color(0.25882354, 0.84705883, 0.8745098, 1)
-light_energy = 0.5
+light_energy = 1.2
 
 [node name="LuzDerecha" type="OmniLight3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal/LucesExterior" unique_id=283781541]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3019776, 3, 0.08708191)
 light_color = Color(0.25882354, 0.84705883, 0.8745098, 1)
-light_energy = 0.5
+light_energy = 1.2
 
 [node name="LocalesExteriores" type="Node3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro" unique_id=986056442]
 
@@ -1038,6 +1103,10 @@ wall_min_slide_angle = 0.17453292
 
 [node name="Policia" parent="." unique_id=428194922 instance=ExtResource("6_37axr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46566057, 0.35980034, -64.39122)
+
+[node name="FachadasAhumada" parent="." instance=ExtResource("20_fachadas")]
+
+[node name="MobiliarioAhumada" parent="." instance=ExtResource("21_mobiliario")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1939159178]
 environment = SubResource("Environment_4kxuq")

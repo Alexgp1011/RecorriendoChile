@@ -1,0 +1,61 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="Mat_metal_farol"]
+albedo_color = Color(0.08, 0.16, 0.12, 1)
+metallic = 0.5
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="Mat_vidrio_farol"]
+albedo_color = Color(1, 0.92, 0.7, 1)
+emission_enabled = true
+emission = Color(1, 0.86, 0.55, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="CylinderMesh" id="Base"]
+material = SubResource("Mat_metal_farol")
+top_radius = 0.16
+bottom_radius = 0.22
+height = 0.5
+radial_segments = 12
+
+[sub_resource type="CylinderMesh" id="Poste"]
+material = SubResource("Mat_metal_farol")
+top_radius = 0.06
+bottom_radius = 0.08
+height = 4.0
+radial_segments = 10
+
+[sub_resource type="BoxMesh" id="Brazo"]
+material = SubResource("Mat_metal_farol")
+size = Vector3(0.9, 0.06, 0.06)
+
+[sub_resource type="BoxMesh" id="Linterna"]
+material = SubResource("Mat_vidrio_farol")
+size = Vector3(0.32, 0.42, 0.32)
+
+[sub_resource type="BoxMesh" id="Tapa"]
+material = SubResource("Mat_metal_farol")
+size = Vector3(0.44, 0.08, 0.44)
+
+[node name="Farol" type="Node3D"]
+
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+mesh = SubResource("Base")
+
+[node name="Poste" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("Poste")
+
+[node name="Brazo" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42, 4.3, 0)
+mesh = SubResource("Brazo")
+
+[node name="Linterna" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82, 4.02, 0)
+cast_shadow = 0
+mesh = SubResource("Linterna")
+
+[node name="Tapa" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82, 4.27, 0)
+mesh = SubResource("Tapa")

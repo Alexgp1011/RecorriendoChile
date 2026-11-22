@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3cj7gv3k72c5"
-path.s3tc="res://.godot/imported/Fachada modernista en pixel art.png-b9de70f7f77f7b22be8f11b7ac5554a2.s3tc.ctex"
+path="res://.godot/imported/Fachada modernista en pixel art.png-b9de70f7f77f7b22be8f11b7ac5554a2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Asset/Fachada modernista en pixel art.png"
-dest_files=["res://.godot/imported/Fachada modernista en pixel art.png-b9de70f7f77f7b22be8f11b7ac5554a2.s3tc.ctex"]
+dest_files=["res://.godot/imported/Fachada modernista en pixel art.png-b9de70f7f77f7b22be8f11b7ac5554a2.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

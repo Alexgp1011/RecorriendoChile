@@ -1,0 +1,8 @@
+Reviewed-Content-Hash: Scene/world.tscn ee9057d5bb6364d034b15f1fb4350777067dd8ba
+Reviewed-Content-Hash: Asset/Fachada bancaria pixel art retro.png.import b47cb1d50593448c03bf1bf6c2c0d89b70ecbf74
+Reviewed-Content-Hash: Asset/Fachada histórica con tiendas Falabella y Belsport.png.import 83fc27de637d711f6945bb8b925d342d9f2b3f69
+Reviewed-Content-Hash: Asset/Fachada modernista en pixel art.png.import fbe02897f6c28c9270571933a57731be8eaa8451
+Reviewed-Content-Hash: Asset/Fachada neoclásica con banderas chilenas.png.import 9891fafc594792ac2f1b7344cd5814695a70092d
+Reviewed-Content-Hash: Asset/Fachada pixel art del Café Caribe.png.import b418032029a717222681cb20e3f15b0f4feec9c9
+Reviewed-Content-Hash: Asset/Fachada pixel art del Edificio Plaza.png.import 05e6b3dc9922170bff657da8502a6c2ca77989f2
+Reviewed-Content-Hash: Asset/Pavimento Pixelado de Bandas Ondulantes.png.import 79047e10f768d73abfd27747ac929c34b3cf534e
