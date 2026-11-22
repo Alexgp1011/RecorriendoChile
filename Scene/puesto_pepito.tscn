@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://go35cu7jybth"]
+
+[ext_resource type="Script" uid="uid://bbimonapcn6ue" path="res://Scripts/PuestoPepito.gd" id="1_fxbnf"]
+[ext_resource type="Script" uid="uid://dijd4q0ls0m1w" path="res://Scripts/vendedor_pepito.gd" id="2_x1byg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x1byg"]
+size = Vector3(2.2, 1.3, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxbnf"]
+albedo_color = Color(0.34442076, 0.2491774, 0.06192658, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m3rkp"]
+material = SubResource("StandardMaterial3D_fxbnf")
+size = Vector3(2.2, 0.12, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuof7"]
+albedo_color = Color(0.9808553, 0.09320182, 0.11207495, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kuvul"]
+material = SubResource("StandardMaterial3D_nuof7")
+top_radius = 0.1
+bottom_radius = 0.19
+height = 0.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vushy"]
+albedo_color = Color(1, 0.8235294, 0.101960786, 1)
+emission_enabled = true
+emission = Color(1, 0.8235294, 0.101960786, 1)
+emission_energy_multiplier = 1.8
+
+[sub_resource type="SphereMesh" id="SphereMesh_7t78n"]
+material = SubResource("StandardMaterial3D_vushy")
+radius = 0.08
+height = 0.16
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4kxuq"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4kxuq"]
+radius = 7.0
+
+[node name="PuestoPepito" type="StaticBody3D" unique_id=638980795]
+script = ExtResource("1_fxbnf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=165559760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+shape = SubResource("BoxShape3D_x1byg")
+
+[node name="Mesa" type="MeshInstance3D" parent="." unique_id=2088345885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_m3rkp")
+
+[node name="Cono0" type="MeshInstance3D" parent="." unique_id=862449246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 1.24, 0)
+mesh = SubResource("CylinderMesh_kuvul")
+
+[node name="Cono1" type="MeshInstance3D" parent="." unique_id=2116755405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24, 0)
+mesh = SubResource("CylinderMesh_kuvul")
+
+[node name="Cono2" type="MeshInstance3D" parent="." unique_id=1569637660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 1.24, 0)
+mesh = SubResource("CylinderMesh_kuvul")
+
+[node name="Pelota" type="MeshInstance3D" parent="." unique_id=1557898677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 0)
+mesh = SubResource("SphereMesh_7t78n")
+
+[node name="CamaraPepito" type="Camera3D" parent="." unique_id=589518039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 3)
+fov = 60.0
+
+[node name="Interfaz" type="CanvasLayer" parent="." unique_id=309874583]
+
+[node name="Minijuego" type="Control" parent="Interfaz" unique_id=176769897]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VendedorPepito" type="Node3D" parent="." unique_id=811116413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.85)
+script = ExtResource("2_x1byg")
+radio_alerta = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="VendedorPepito" unique_id=764552399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_4kxuq")
+
+[node name="DetectorPolicia" type="Area3D" parent="." unique_id=744790319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectorPolicia" unique_id=366708827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_4kxuq")

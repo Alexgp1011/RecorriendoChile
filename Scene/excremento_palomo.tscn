@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b20nxdcck0bes"]
+
+[ext_resource type="Script" uid="uid://bc4qtqbb4wlqm" path="res://Scripts/excremento_palomo.gd" id="1_psulf"]
+
+[node name="ExcrementoPalomo" type="Area3D" unique_id=1119770195]
+script = ExtResource("1_psulf")

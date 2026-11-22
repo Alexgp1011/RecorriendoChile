@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://c5hbas3aaqe8a"]
+
+[ext_resource type="Script" uid="uid://l2grh4l25f1c" path="res://Scripts/manifestante.gd" id="1_yg45s"]
+[ext_resource type="Texture2D" uid="uid://bmiv3qk1kqrvo" path="res://Asset/Hoja de sprites del manifestante enmascarado.png" id="2_1rsv0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kxuq"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_mti6b"]
+size = Vector3(0.7, 1.8, 0.4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsvf0"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(724, 0, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7fps"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(1086, 0, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1i3h"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(0, 362, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb0bn"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(0, 362, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdg54"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(362, 362, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnkel"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(724, 362, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3otf"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(1086, 362, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mtfh"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(0, 0, 362, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euh8j"]
+atlas = ExtResource("2_1rsv0")
+region = Rect2(362, 0, 362, 362)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kxuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsvf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7fps")
+}],
+"loop": 1,
+"name": &"chase",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1i3h")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb0bn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdg54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnkel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3otf")
+}],
+"loop": 1,
+"name": &"punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mtfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euh8j")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 3.27
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mm1bc"]
+radius = 6.0
+
+[node name="Manifestante" type="CharacterBody3D" unique_id=1451253692]
+script = ExtResource("1_yg45s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1552324956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_4kxuq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1446435230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
+mesh = SubResource("BoxMesh_mti6b")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2039475482]
+transform = Transform3D(0.09747247, 0, 0, 0, 0.13461661, 0, 0, 0, 0.114776134, 0, 1.15, 0)
+pixel_size = 0.06
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_4kxuq")
+animation = &"punch"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.44143158
+
+[node name="AreaDeteccion" type="Area3D" parent="." unique_id=1102506593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaDeteccion" unique_id=1403726780]
+shape = SubResource("SphereShape3D_mm1bc")

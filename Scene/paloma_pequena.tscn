@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://psoshqjuae8e"]
+
+[ext_resource type="Script" uid="uid://boc558ixhrvgy" path="res://Scripts/paloma_pequena.gd" id="1_6e6w8"]
+[ext_resource type="Texture2D" uid="uid://bgj2ej8cnoobk" path="res://Asset/Sprites de Paloma Callejera Feroz.png" id="2_muiln"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nmunq"]
+radius = 0.45
+
+[sub_resource type="SphereMesh" id="SphereMesh_6e6w8"]
+radius = 0.45
+height = 0.9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxls7"]
+atlas = ExtResource("2_muiln")
+region = Rect2(0, 560, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilvvy"]
+atlas = ExtResource("2_muiln")
+region = Rect2(280, 560, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk4n5"]
+atlas = ExtResource("2_muiln")
+region = Rect2(560, 560, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roxvt"]
+atlas = ExtResource("2_muiln")
+region = Rect2(840, 560, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6oak"]
+atlas = ExtResource("2_muiln")
+region = Rect2(840, 1120, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6gos"]
+atlas = ExtResource("2_muiln")
+region = Rect2(560, 1120, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0j8f"]
+atlas = ExtResource("2_muiln")
+region = Rect2(280, 1120, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20i3h"]
+atlas = ExtResource("2_muiln")
+region = Rect2(0, 280, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10v0c"]
+atlas = ExtResource("2_muiln")
+region = Rect2(280, 280, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tulf"]
+atlas = ExtResource("2_muiln")
+region = Rect2(560, 280, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25rgq"]
+atlas = ExtResource("2_muiln")
+region = Rect2(840, 280, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb1aw"]
+atlas = ExtResource("2_muiln")
+region = Rect2(0, 840, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjiwy"]
+atlas = ExtResource("2_muiln")
+region = Rect2(280, 840, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlk4i"]
+atlas = ExtResource("2_muiln")
+region = Rect2(560, 840, 280, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juot2"]
+atlas = ExtResource("2_muiln")
+region = Rect2(0, 0, 280, 280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kxuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxls7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilvvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk4n5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roxvt")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6oak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6gos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0j8f")
+}],
+"loop": 2,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20i3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10v0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tulf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25rgq")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb1aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjiwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlk4i")
+}],
+"loop": 2,
+"name": &"hurt",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juot2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="PalomaPequena" type="CharacterBody3D" unique_id=960254187]
+script = ExtResource("1_6e6w8")
+vida_maxima = 1
+velocidad_vuelo = 6.5
+dano_picotazo = 10
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=360598117]
+shape = SubResource("SphereShape3D_nmunq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=332718423]
+visible = false
+mesh = SubResource("SphereMesh_6e6w8")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1183165462]
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_4kxuq")
+animation = &"idle"

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cme2tw3kiv4yd"]
+
+[node name="LocalBase" type="Node3D" unique_id=634614831]
+
+[node name="ParedIzquierda" type="CSGBox3D" parent="." unique_id=1750433980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35, 1.7, 0)
+use_collision = true
+size = Vector3(0.15, 3.4, 5.1)
+
+[node name="ParedDerecha" type="CSGBox3D" parent="." unique_id=1177298318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35, 1.7, 0)
+use_collision = true
+size = Vector3(0.15, 3.4, 5.1)
+
+[node name="ParedFondo" type="CSGBox3D" parent="." unique_id=1572212457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -2.55)
+use_collision = true
+size = Vector3(4.8, 3.4, 0.15)
+
+[node name="FachadaIzquierda" type="CSGBox3D" parent="." unique_id=638260019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55, 1.7, 2.55)
+use_collision = true
+size = Vector3(1.7, 3.4, 0.15)
+
+[node name="FachadaDerecha" type="CSGBox3D" parent="." unique_id=1746463294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.7, 2.55)
+use_collision = true
+size = Vector3(1.7, 3.4, 0.15)
+
+[node name="Meson" type="CSGBox3D" parent="." unique_id=2027746707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, -0.85)
+use_collision = true
+size = Vector3(2.5, 1.1, 0.7)
+
+[node name="Estanteria" type="CSGBox3D" parent="." unique_id=1952863853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, -2.2)
+size = Vector3(3.6, 2.2, 0.3)
+
+[node name="Letrero" type="CSGBox3D" parent="." unique_id=2093513394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 2.65)
+use_collision = true
+size = Vector3(4.8, 0.55, 0.12)
+
+[node name="NombreTienda" type="Label3D" parent="." unique_id=901277761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 2.74)
+pixel_size = 0.008
+text = "RETRO PLAY
+"
+font_size = 48

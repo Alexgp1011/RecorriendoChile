@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bqnxosfrk4vg"]
+
+[ext_resource type="Script" uid="uid://c8nskvhlpanky" path="res://Scripts/policia.gd" id="1_mu6u3"]
+[ext_resource type="Texture2D" uid="uid://0sbn2ioy7bhy" path="res://Asset/Hoja de sprites de soldado antidisturbios retro.png" id="2_ktxni"]
+[ext_resource type="Script" uid="uid://dcgw688frbkww" path="res://Scripts/Policia_Visual.gd" id="3_ptbof"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kxuq"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_mti6b"]
+size = Vector3(0.7, 1.4, 0.4)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mm1bc"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptbof"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(0, 626, 127, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw3g5"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(118, 626, 118, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w538q"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(327, 626, 109, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6djkh"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(0, 326, 149, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8evr"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(140, 326, 140, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63a4x"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(280, 326, 140, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jcle"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(0, 626, 127, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2ou2"]
+atlas = ExtResource("2_ktxni")
+region = Rect2(0, 0, 179, 335)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kxuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptbof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw3g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w538q")
+}],
+"loop": 1,
+"name": &"arrest",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6djkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8evr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63a4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jcle")
+}],
+"loop": 1,
+"name": &"chase",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2ou2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6djkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8evr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63a4x")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[node name="Policia" type="CharacterBody3D" unique_id=428194922 groups=["policia"]]
+script = ExtResource("1_mu6u3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2096375218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_4kxuq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1067750000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
+mesh = SubResource("BoxMesh_mti6b")
+
+[node name="AreaDeteccion" type="Area3D" parent="." unique_id=1072322296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaDeteccion" unique_id=601391374]
+shape = SubResource("SphereShape3D_mm1bc")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2075575339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+pixel_size = 0.008
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_4kxuq")
+animation = &"arrest"
+autoplay = "walk"
+frame = 2
+frame_progress = 0.4935427
+script = ExtResource("3_ptbof")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1860082679]
+path_desired_distance = 0.6
+target_desired_distance = 0.8
+radius = 0.4
