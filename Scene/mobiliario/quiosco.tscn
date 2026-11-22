@@ -53,6 +53,12 @@ size = Vector3(0.03, 0.3, 0.22)
 material = SubResource("Mat_rev_blanco")
 size = Vector3(0.03, 0.3, 0.22)
 
+[sub_resource type="BoxShape3D" id="ColCuerpo"]
+size = Vector3(1.4, 2.2, 1.8)
+
+[sub_resource type="BoxShape3D" id="ColMostrador"]
+size = Vector3(0.35, 0.9, 1.6)
+
 [node name="Quiosco" type="Node3D"]
 
 [node name="Cuerpo" type="MeshInstance3D" parent="."]
@@ -119,3 +125,13 @@ modulate = Color(0.98, 0.92, 0.6, 1)
 outline_size = 0
 text = "DIARIOS Y REVISTAS"
 font_size = 48
+
+[node name="Colision" type="StaticBody3D" parent="."]
+
+[node name="Cuerpo" type="CollisionShape3D" parent="Colision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11, 0)
+shape = SubResource("ColCuerpo")
+
+[node name="Mostrador" type="CollisionShape3D" parent="Colision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88, 0.46, 0)
+shape = SubResource("ColMostrador")

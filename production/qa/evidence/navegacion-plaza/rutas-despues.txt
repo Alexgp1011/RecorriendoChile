@@ -1,0 +1,33 @@
+NAVCHK: iteracion del mapa 2, regiones 1
+NAVCHK OK     policia Punto01 -> Punto02: llega=true largo=18.9 m holgura_mobiliario=5.08 m
+NAVCHK OK     policia Punto02 -> Punto03: llega=true largo=16.3 m holgura_mobiliario=6.10 m
+NAVCHK OK     policia Punto03 -> Punto04: llega=true largo=18.7 m holgura_mobiliario=3.04 m
+NAVCHK OK     policia Punto04 -> Punto05: llega=true largo=18.4 m holgura_mobiliario=3.06 m
+NAVCHK OK     policia Punto05 -> Punto06: llega=true largo=94.6 m holgura_mobiliario=3.77 m
+NAVCHK OK     policia Punto06 -> Punto01: llega=true largo=32.7 m holgura_mobiliario=6.76 m
+NAVCHK OK     ladron (0.0, 0.0, 0.0) -> Escape01: llega=true largo=38.2 m holgura_mobiliario=4.01 m
+NAVCHK OK     ladron (0.0, 0.0, -20.0) -> Escape01: llega=true largo=18.8 m holgura_mobiliario=6.63 m
+NAVCHK OK     ladron (0.0, 0.0, -40.0) -> Escape01: llega=true largo=7.3 m holgura_mobiliario=12.36 m
+NAVCHK OK     ladron (0.0, 0.0, -60.0) -> Escape01: llega=true largo=23.5 m holgura_mobiliario=7.07 m
+NAVCHK OK     ladron (0.0, 0.0, -80.0) -> Escape01: llega=true largo=43.1 m holgura_mobiliario=4.09 m
+NAVCHK OK     ladron (0.0, 0.0, -95.0) -> Escape01: llega=true largo=57.9 m holgura_mobiliario=3.17 m
+NAVCHK OK     ladron (0.0, 0.0, 0.0) -> Escape02: llega=true largo=47.7 m holgura_mobiliario=1.81 m
+NAVCHK OK     ladron (0.0, 0.0, -20.0) -> Escape02: llega=true largo=28.2 m holgura_mobiliario=3.95 m
+NAVCHK OK     ladron (0.0, 0.0, -40.0) -> Escape02: llega=true largo=11.0 m holgura_mobiliario=7.06 m
+NAVCHK OK     ladron (0.0, 0.0, -60.0) -> Escape02: llega=true largo=15.8 m holgura_mobiliario=2.85 m
+NAVCHK OK     ladron (0.0, 0.0, -80.0) -> Escape02: llega=true largo=34.3 m holgura_mobiliario=0.65 m
+NAVCHK OK     ladron (0.0, 0.0, -95.0) -> Escape02: llega=true largo=49.0 m holgura_mobiliario=0.65 m
+NAVCHK OK     ladron (0.0, 0.0, 0.0) -> Escape03: llega=true largo=82.5 m holgura_mobiliario=1.39 m
+NAVCHK OK     ladron (0.0, 0.0, -20.0) -> Escape03: llega=true largo=62.6 m holgura_mobiliario=1.49 m
+NAVCHK OK     ladron (0.0, 0.0, -40.0) -> Escape03: llega=true largo=42.7 m holgura_mobiliario=1.68 m
+NAVCHK OK     ladron (0.0, 0.0, -60.0) -> Escape03: llega=true largo=23.1 m holgura_mobiliario=2.18 m
+NAVCHK OK     ladron (0.0, 0.0, -80.0) -> Escape03: llega=true largo=6.7 m holgura_mobiliario=4.22 m
+NAVCHK OK     ladron (0.0, 0.0, -95.0) -> Escape03: llega=true largo=14.2 m holgura_mobiliario=4.23 m
+NAVCHK OK     ladron Escape01 -> Escape02: llega=true largo=18.2 m holgura_mobiliario=7.06 m
+NAVCHK OK     ladron Escape01 -> Escape03: llega=true largo=46.7 m holgura_mobiliario=2.22 m
+NAVCHK OK     ladron Escape02 -> Escape01: llega=true largo=18.2 m holgura_mobiliario=7.06 m
+NAVCHK OK     ladron Escape02 -> Escape03: llega=true largo=35.7 m holgura_mobiliario=0.65 m
+NAVCHK OK     ladron Escape03 -> Escape01: llega=true largo=46.7 m holgura_mobiliario=2.22 m
+NAVCHK OK     ladron Escape03 -> Escape02: llega=true largo=35.7 m holgura_mobiliario=0.65 m
+NAVCHK OK     calle -> Plaza (ArenaDonPalomo): llega=true largo=38.8 m holgura_mobiliario=6.65 m
+NAVCHK: resumen fallos=0

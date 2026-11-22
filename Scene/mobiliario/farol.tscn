@@ -37,6 +37,10 @@ size = Vector3(0.32, 0.42, 0.32)
 material = SubResource("Mat_metal_farol")
 size = Vector3(0.44, 0.08, 0.44)
 
+[sub_resource type="CylinderShape3D" id="ColPoste"]
+height = 4.5
+radius = 0.2
+
 [node name="Farol" type="Node3D"]
 
 [node name="Base" type="MeshInstance3D" parent="."]
@@ -59,3 +63,9 @@ mesh = SubResource("Linterna")
 [node name="Tapa" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82, 4.27, 0)
 mesh = SubResource("Tapa")
+
+[node name="Colision" type="StaticBody3D" parent="."]
+
+[node name="Forma" type="CollisionShape3D" parent="Colision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
+shape = SubResource("ColPoste")
