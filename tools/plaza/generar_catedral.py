@@ -13,7 +13,11 @@ refugios contra la lluvia de marcas rojas.
 
 Uso, desde la raiz del proyecto:  python tools/plaza/generar_catedral.py
 """
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from materiales import Materiales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Scene" / "plaza" / "catedral.tscn"
@@ -45,6 +49,18 @@ COLORES = {
     "techo": (0.42, 0.45, 0.48), "cupula": (0.50, 0.56, 0.58),
     "cruz": (0.30, 0.30, 0.32), "reja": (0.08, 0.09, 0.08),
 }
+
+# Material -> (textura de Asset/texturas, tinte). El resto queda en color plano.
+TEXTURIZADO = {
+    "piedra": ("canteria", (1.0, 1.0, 1.0)),
+    "piedra_sombra": ("canteria", (0.82, 0.8, 0.77)),
+    "techo": ("teja", (1.0, 1.0, 1.0)),
+    "cupula": ("cupula", (1.0, 1.0, 1.0)),
+    "cruz": ("fierro", (1.0, 1.0, 1.0)),
+    "reja": ("fierro", (1.0, 1.0, 1.0)),
+}
+
+CABECERA = ""
 
 sub, nodos = [], ['[node name="CatedralMetropolitana" type="Node3D"]']
 mallas = {}
@@ -89,9 +105,17 @@ def caja(nombre, centro, tam, color, padre="."):
 
 
 def main():
-    for nombre, (r, g, b) in COLORES.items():
-        sub.append(f'[sub_resource type="StandardMaterial3D" id="Mat_{nombre}"]\n'
-                   f'albedo_color = Color({r}, {g}, {b}, 1)\nroughness = 0.95')
+    # Colores planos -> texturas pixel art donde las hay (tools/plaza/materiales.py)
+    mats = Materiales()
+    for nombre, color in COLORES.items():
+        if nombre in TEXTURIZADO:
+            textura, tinte = TEXTURIZADO[nombre]
+            mats.textura(nombre, textura, tinte)
+        else:
+            mats.plano(nombre, color)
+    sub[:0] = mats.sub
+    global CABECERA
+    CABECERA = mats.cabecera()
 
     # Nave y techo
     csg_caja("Nave", (FX - NAVE_FONDO / 2, NAVE_ALTO / 2, CZ), (NAVE_FONDO, NAVE_ALTO, NAVE_ANCHO), "piedra")
@@ -157,7 +181,7 @@ def main():
     # Solo cuenta lo que tiene colision: el tramo de reja (0.12 m) y el peldano 1.
     assert REJA_X + 0.06 < LIMITE_ATAQUE_X and FX + 3.3 < LIMITE_ATAQUE_X, "la catedral invade el area de ataque"
 
-    out = "[gd_scene format=3]\n\n" + "\n\n".join(sub) + "\n\n" + "\n\n".join(nodos) + "\n"
+    out = "[gd_scene format=3]\n\n" + CABECERA + "\n\n".join(sub) + "\n\n" + "\n\n".join(nodos) + "\n"
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(out, encoding="utf-8", newline="\n")
     print(f"escrito {OUT.relative_to(ROOT)}: {len(nodos)} nodos, {len(mallas)} mallas")

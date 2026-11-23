@@ -1,12 +1,27 @@
 [gd_scene format=3]
 
+[ext_resource type="Texture2D" path="res://Asset/texturas/canteria.png" id="tex_canteria"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/teja.png" id="tex_teja"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/cupula.png" id="tex_cupula"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/fierro.png" id="tex_fierro"]
+
 [sub_resource type="StandardMaterial3D" id="Mat_piedra"]
-albedo_color = Color(0.8, 0.74, 0.64, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_canteria")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_piedra_sombra"]
-albedo_color = Color(0.66, 0.6, 0.52, 1)
+albedo_color = Color(0.82, 0.8, 0.77, 1)
+albedo_texture = ExtResource("tex_canteria")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_puerta"]
 albedo_color = Color(0.22, 0.15, 0.1, 1)
@@ -17,20 +32,40 @@ albedo_color = Color(0.1, 0.11, 0.14, 1)
 roughness = 0.95
 
 [sub_resource type="StandardMaterial3D" id="Mat_techo"]
-albedo_color = Color(0.42, 0.45, 0.48, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_teja")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_cupula"]
-albedo_color = Color(0.5, 0.56, 0.58, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_cupula")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_cruz"]
-albedo_color = Color(0.3, 0.3, 0.32, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_fierro")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_reja"]
-albedo_color = Color(0.08, 0.09, 0.08, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_fierro")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_0"]
 material = SubResource("Mat_techo")

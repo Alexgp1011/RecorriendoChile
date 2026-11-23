@@ -1,0 +1,5 @@
+Reviewed-Content-Hash: Scene/plaza/catedral.tscn 3167ba5f05b7a701a0321876f902e09928f7b6dd
+Reviewed-Content-Hash: Scene/plaza/perimetro.tscn 62ece25256a807aa02e8c69bfa8ce9a20965ee37
+Reviewed-Content-Hash: Scene/plaza/suelo_plaza.tscn 445a15b8cab5cd320cfbed409467fddd3227e309
+Reviewed-Content-Hash: Scene/plaza/banca.tscn 6e0c1142fcd51935a0586b81043d36343e0dff94
+Reviewed-Content-Hash: Scene/world.tscn f745e3f176db5326e25f07b95abbc7c6a161cb77

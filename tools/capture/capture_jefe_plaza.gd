@@ -32,7 +32,27 @@ func _initialize() -> void:
 
 	var fin := Time.get_ticks_msec() + segundos * 1000.0
 	var foto_combate := false
+	var foto_marcas := false
+	var cam_arriba := Camera3D.new()
+	root.add_child(cam_arriba)
+	var cam_jugador := root.get_viewport().get_camera_3d()
+	var cuadro := 0
 	while Time.get_ticks_msec() < fin:
+		cuadro += 1
+		# Once a rain is on the ground, one top-down photo of the red marks
+		# (they must show above the plaza pavement).
+		if not foto_marcas and cuadro % 10 == 0:
+			var marcas := current_scene.find_children("IndicadorRojo", "MeshInstance3D", true, false)
+			if marcas.size() >= 8:
+				foto_marcas = true
+				cam_arriba.look_at_from_position(Vector3(-1, 26, -126), Vector3(-1, 0, -128.7), Vector3.UP)
+				cam_arriba.make_current()
+				await process_frame
+				await RenderingServer.frame_post_draw
+				root.get_texture().get_image().save_png(out_dir.path_join("marcas-rojas.png"))
+				print("JEFECAP marcas visibles en pantalla: ", marcas.size())
+				if cam_jugador != null:
+					cam_jugador.make_current()
 		if salud != null and salud.get("vida_actual") != null:
 			salud.set("vida_actual", 100)   # invulnerable: we only observe the boss
 		if not foto_combate and Time.get_ticks_msec() > fin - segundos * 1000.0 + 9000.0:

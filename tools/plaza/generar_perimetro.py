@@ -18,7 +18,11 @@ Restricciones (comprobadas con assert):
 
 Uso, desde la raiz del proyecto:  python tools/plaza/generar_perimetro.py
 """
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from materiales import Materiales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "Scene" / "plaza" / "perimetro.tscn"
@@ -44,6 +48,20 @@ COLORES = {
     "techo": (0.40, 0.33, 0.28), "reloj": (0.93, 0.92, 0.85),
     "aguja": (0.08, 0.08, 0.08), "suelo": (0.62, 0.60, 0.56),
 }
+
+# Material -> (textura de Asset/texturas, tinte). El resto queda en color plano.
+TEXTURIZADO = {
+    "estuco": ("estuco", (1.0, 1.0, 1.0)),
+    "estuco_ocre": ("estuco_ocre", (1.0, 1.0, 1.0)),
+    "estuco_gris": ("estuco_gris", (1.0, 1.0, 1.0)),
+    "moldura": ("canteria", (1.0, 1.0, 1.0)),
+    "cortina": ("cortina", (1.0, 1.0, 1.0)),
+    "toldo": ("toldo", (1.0, 1.0, 1.0)),
+    "techo": ("teja", (1.0, 1.0, 1.0)),
+    "suelo": ("granito", (0.92, 0.92, 0.92)),
+}
+
+CABECERA = ""
 
 sub, nodos, mallas = [], ['[node name="PerimetroPlaza" type="Node3D"]'], {}
 solidos = []   # (nombre, x0, x1, y0, y1, z0, z1) de todo lo que tiene colision
@@ -103,9 +121,17 @@ def ventanas(padre, eje, plano, a0, a1, pisos, alto_piso, y0, ancho=1.3, alto=1.
 
 
 def main():
-    for nombre, (r, g, b) in COLORES.items():
-        sub.append(f'[sub_resource type="StandardMaterial3D" id="Mat_{nombre}"]\n'
-                   f'albedo_color = Color({r}, {g}, {b}, 1)\nroughness = 0.95')
+    # Colores planos -> texturas pixel art donde las hay (tools/plaza/materiales.py)
+    mats = Materiales()
+    for nombre, color in COLORES.items():
+        if nombre in TEXTURIZADO:
+            textura, tinte = TEXTURIZADO[nombre]
+            mats.textura(nombre, textura, tinte)
+        else:
+            mats.plano(nombre, color)
+    sub[:0] = mats.sub
+    global CABECERA
+    CABECERA = mats.cabecera()
 
     # --- Suelo alrededor (por debajo del de la plaza y de Ahumada) -------------
     nodos.append('[node name="SueloPerimetro" type="CSGBox3D" parent="."]\n'
@@ -176,7 +202,7 @@ def main():
         padre = cab.split('parent="')[1].split('"')[0] if 'parent="' in cab else ""
         assert (padre, nombre) not in vistos, f"nombre repetido: {padre}/{nombre}"
         vistos.add((padre, nombre))
-    out = "[gd_scene format=3]\n\n" + "\n\n".join(sub) + "\n\n" + "\n\n".join(nodos) + "\n"
+    out = "[gd_scene format=3]\n\n" + CABECERA + "\n\n".join(sub) + "\n\n" + "\n\n".join(nodos) + "\n"
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(out, encoding="utf-8", newline="\n")
     print(f"escrito {OUT.relative_to(ROOT)}: {len(nodos)} nodos, {len(solidos)} volumenes con colision")

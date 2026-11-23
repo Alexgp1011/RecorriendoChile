@@ -1,0 +1,61 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://Asset/texturas/madera_banca.png" id="tex_madera_banca"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/fierro.png" id="tex_fierro"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_madera"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_madera_banca")
+roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(1.0, 1.0, 1.0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="Mat_fierro"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_fierro")
+roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(1.0, 1.0, 1.0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="Asiento"]
+material = SubResource("Mat_madera")
+size = Vector3(1.8, 0.08, 0.5)
+
+[sub_resource type="BoxMesh" id="Respaldo"]
+material = SubResource("Mat_madera")
+size = Vector3(1.8, 0.36, 0.06)
+
+[sub_resource type="BoxMesh" id="Pata"]
+material = SubResource("Mat_fierro")
+size = Vector3(0.08, 0.86, 0.5)
+
+[sub_resource type="BoxShape3D" id="Forma"]
+size = Vector3(1.8, 0.9, 0.55)
+
+[node name="Banca" type="Node3D"]
+
+[node name="Asiento" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+mesh = SubResource("Asiento")
+
+[node name="Respaldo" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.966, -0.259, 0, 0.259, 0.966, 0, 0.72, -0.24)
+mesh = SubResource("Respaldo")
+
+[node name="PataIzq" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.43, 0)
+mesh = SubResource("Pata")
+
+[node name="PataDer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.43, 0)
+mesh = SubResource("Pata")
+
+[node name="Colision" type="StaticBody3D" parent="."]
+
+[node name="Forma" type="CollisionShape3D" parent="Colision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+shape = SubResource("Forma")

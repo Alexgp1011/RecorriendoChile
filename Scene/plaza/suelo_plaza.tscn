@@ -1,0 +1,287 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/plaza/banca.tscn" id="escena_banca"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/pasto.png" id="tex_pasto"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/pavimento_plaza.png" id="tex_pavimento_plaza"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/flor.png" id="tex_flor"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_pasto"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_pasto")
+roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="Mat_pavimento"]
+albedo_texture = ExtResource("tex_pavimento_plaza")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="QuadMesh" id="Pavimento"]
+material = SubResource("Mat_pavimento")
+size = Vector2(40, 40)
+
+[sub_resource type="QuadMesh" id="Pasto"]
+material = SubResource("Mat_pasto")
+size = Vector2(4.6, 3.1)
+
+[node name="SueloPlazaDecorado" type="Node3D"]
+
+[node name="Pavimento" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.962, 0.0149, -122.0077)
+cast_shadow = 0
+mesh = SubResource("Pavimento")
+
+[node name="Jardineras" type="Node3D" parent="."]
+
+[node name="Jardinera1" type="Node3D" parent="Jardineras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3455, 0.655, -114.8033)
+
+[node name="Pasto" type="MeshInstance3D" parent="Jardineras/Jardinera1"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0.01, 0)
+cast_shadow = 0
+mesh = SubResource("Pasto")
+
+[node name="Flor1" type="Sprite3D" parent="Jardineras/Jardinera1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0367, 0.26, -0.2173)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor2" type="Sprite3D" parent="Jardineras/Jardinera1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7557, 0.26, -1.064)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor3" type="Sprite3D" parent="Jardineras/Jardinera1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3007, 0.26, -0.6361)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor4" type="Sprite3D" parent="Jardineras/Jardinera1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5315, 0.26, 0.4292)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor5" type="Sprite3D" parent="Jardineras/Jardinera1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9626, 0.26, 0.9804)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor6" type="Sprite3D" parent="Jardineras/Jardinera1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1141, 0.26, 0.6299)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Jardinera2" type="Node3D" parent="Jardineras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.907, 0.655, -115.0367)
+
+[node name="Pasto" type="MeshInstance3D" parent="Jardineras/Jardinera2"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0.01, 0)
+cast_shadow = 0
+mesh = SubResource("Pasto")
+
+[node name="Flor1" type="Sprite3D" parent="Jardineras/Jardinera2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.322, 0.26, 0.9502)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor2" type="Sprite3D" parent="Jardineras/Jardinera2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8873, 0.26, 1.2454)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor3" type="Sprite3D" parent="Jardineras/Jardinera2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7587, 0.26, -0.8528)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor4" type="Sprite3D" parent="Jardineras/Jardinera2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3804, 0.26, -0.5563)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor5" type="Sprite3D" parent="Jardineras/Jardinera2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.827, 0.26, 0.6046)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor6" type="Sprite3D" parent="Jardineras/Jardinera2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6115, 0.26, 0.8557)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Jardinera3" type="Node3D" parent="Jardineras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.113, 0.655, -126.594)
+
+[node name="Pasto" type="MeshInstance3D" parent="Jardineras/Jardinera3"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0.01, 0)
+cast_shadow = 0
+mesh = SubResource("Pasto")
+
+[node name="Flor1" type="Sprite3D" parent="Jardineras/Jardinera3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1932, 0.26, 0.2112)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor2" type="Sprite3D" parent="Jardineras/Jardinera3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1992, 0.26, -1.0836)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor3" type="Sprite3D" parent="Jardineras/Jardinera3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2264, 0.26, 0.1956)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor4" type="Sprite3D" parent="Jardineras/Jardinera3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4023, 0.26, 0.2661)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor5" type="Sprite3D" parent="Jardineras/Jardinera3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1814, 0.26, 0.0403)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor6" type="Sprite3D" parent="Jardineras/Jardinera3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0617, 0.26, -0.3253)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Jardinera4" type="Node3D" parent="Jardineras"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12, 0.655, -125.313)
+
+[node name="Pasto" type="MeshInstance3D" parent="Jardineras/Jardinera4"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0.01, 0)
+cast_shadow = 0
+mesh = SubResource("Pasto")
+
+[node name="Flor1" type="Sprite3D" parent="Jardineras/Jardinera4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9024, 0.26, -0.0123)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor2" type="Sprite3D" parent="Jardineras/Jardinera4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3731, 0.26, 0.1031)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor3" type="Sprite3D" parent="Jardineras/Jardinera4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0747, 0.26, 0.6307)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor4" type="Sprite3D" parent="Jardineras/Jardinera4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9251, 0.26, -0.7961)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor5" type="Sprite3D" parent="Jardineras/Jardinera4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2015, 0.26, -1.0392)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Flor6" type="Sprite3D" parent="Jardineras/Jardinera4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7074, 0.26, -0.2786)
+pixel_size = 0.03125
+billboard = 2
+texture_filter = 0
+alpha_cut = 1
+texture = ExtResource("tex_flor")
+
+[node name="Bancas" type="Node3D" parent="."]
+
+[node name="Banca1" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -12, -0.0001, -119.6)
+
+[node name="Banca2" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 10, -0.0001, -119.6)
+
+[node name="Banca3" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -0.0001, -124.4)
+
+[node name="Banca4" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -0.0001, -124.4)
+
+[node name="Banca5" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.4, -0.0001, -108)
+
+[node name="Banca6" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 1.4, -0.0001, -108)
+
+[node name="Banca7" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.4, -0.0001, -136)
+
+[node name="Banca8" parent="Bancas" instance=ExtResource("escena_banca")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 1.4, -0.0001, -136)

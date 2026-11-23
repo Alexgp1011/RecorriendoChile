@@ -1,20 +1,49 @@
 [gd_scene format=3]
 
+[ext_resource type="Texture2D" path="res://Asset/texturas/estuco.png" id="tex_estuco"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/estuco_ocre.png" id="tex_estuco_ocre"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/estuco_gris.png" id="tex_estuco_gris"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/canteria.png" id="tex_canteria"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/cortina.png" id="tex_cortina"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/toldo.png" id="tex_toldo"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/teja.png" id="tex_teja"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/granito.png" id="tex_granito"]
+
 [sub_resource type="StandardMaterial3D" id="Mat_estuco"]
-albedo_color = Color(0.8, 0.72, 0.58, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_estuco")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_estuco_ocre"]
-albedo_color = Color(0.78, 0.62, 0.4, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_estuco_ocre")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_estuco_gris"]
-albedo_color = Color(0.7, 0.7, 0.68, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_estuco_gris")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_moldura"]
-albedo_color = Color(0.9, 0.86, 0.78, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_canteria")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_ventana"]
 albedo_color = Color(0.1, 0.11, 0.14, 1)
@@ -25,16 +54,31 @@ albedo_color = Color(0.22, 0.15, 0.1, 1)
 roughness = 0.95
 
 [sub_resource type="StandardMaterial3D" id="Mat_cortina"]
-albedo_color = Color(0.45, 0.46, 0.48, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_cortina")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_toldo"]
-albedo_color = Color(0.55, 0.16, 0.14, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_toldo")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_techo"]
-albedo_color = Color(0.4, 0.33, 0.28, 1)
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_teja")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="Mat_reloj"]
 albedo_color = Color(0.93, 0.92, 0.85, 1)
@@ -45,8 +89,13 @@ albedo_color = Color(0.08, 0.08, 0.08, 1)
 roughness = 0.95
 
 [sub_resource type="StandardMaterial3D" id="Mat_suelo"]
-albedo_color = Color(0.62, 0.6, 0.56, 1)
+albedo_color = Color(0.92, 0.92, 0.92, 1)
+albedo_texture = ExtResource("tex_granito")
 roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_0"]
 material = SubResource("Mat_moldura")
