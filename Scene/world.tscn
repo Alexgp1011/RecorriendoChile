@@ -32,20 +32,45 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("3_opfkj")
-texture_filter = 4
 uv1_scale = Vector3(8, 1, 1)
+texture_filter = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mti6b"]
 transparency = 1
 shading_mode = 0
 albedo_texture = ExtResource("3_opfkj")
-texture_filter = 4
 uv1_scale = Vector3(1, 8, 1)
 uv2_scale = Vector3(0, 0, 0)
+texture_filter = 4
 
 [sub_resource type="QuadMesh" id="QuadMesh_4kxuq"]
 material = SubResource("StandardMaterial3D_mti6b")
 size = Vector2(24, 120)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D"]
+albedo_color = Color(0.547, 0.466, 0.402, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D2"]
+albedo_color = Color(0.512, 0.459, 0.42, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D4"]
+albedo_color = Color(0.558, 0.462, 0.388, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D3"]
+albedo_color = Color(0.424, 0.431, 0.424, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D5"]
+albedo_color = Color(0.494, 0.406, 0.335, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_revestimiento_galeria"]
+albedo_color = Color(0.28, 0.31, 0.34, 1)
+metallic = 0.2
+roughness = 0.7
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kxuq"]
 radius = 0.35
@@ -143,6 +168,18 @@ emission_energy_multiplier = 3.0
 material = SubResource("StandardMaterial3D_bx1ot")
 size = Vector3(0.12, 3.2, 0.12)
 
+[sub_resource type="BoxMesh" id="BoxMesh_neon_marquesina"]
+material = SubResource("StandardMaterial3D_bx1ot")
+size = Vector3(0.05, 0.05, 7.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umbral"]
+albedo_color = Color(0.18, 0.19, 0.21, 1)
+roughness = 0.4
+
+[sub_resource type="BoxMesh" id="BoxMesh_umbral"]
+material = SubResource("StandardMaterial3D_umbral")
+size = Vector3(2.5, 0.04, 6.2)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15ghf"]
 albedo_color = Color(0.1882353, 0.22352941, 0.25490198, 1)
 
@@ -153,8 +190,8 @@ size = Vector3(0.14, 3.5, 5.9726563)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxb74"]
 transparency = 1
 albedo_color = Color(0.12, 0.2, 0.24, 0.28)
-roughness = 0.05
 metallic = 0.2
+roughness = 0.05
 
 [sub_resource type="BoxMesh" id="BoxMesh_15ghf"]
 material = SubResource("StandardMaterial3D_dxb74")
@@ -170,8 +207,8 @@ size = Vector3(0.14, 3.5, 11.949219)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4p0s"]
 transparency = 1
 albedo_color = Color(0.12, 0.2, 0.24, 0.28)
-roughness = 0.05
 metallic = 0.2
+roughness = 0.05
 
 [sub_resource type="BoxMesh" id="BoxMesh_aodgb"]
 material = SubResource("StandardMaterial3D_m4p0s")
@@ -442,43 +479,6 @@ geometry_source_group_name = &"geometria_navegacion"
 agent_height = 1.8
 agent_radius = 0.4
 agent_max_climb = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D"]
-albedo_color = Color(0.547, 0.466, 0.402, 1)
-roughness = 0.95
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D2"]
-albedo_color = Color(0.512, 0.459, 0.420, 1)
-roughness = 0.95
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D4"]
-albedo_color = Color(0.558, 0.462, 0.388, 1)
-roughness = 0.95
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D3"]
-albedo_color = Color(0.424, 0.431, 0.424, 1)
-roughness = 0.95
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_estuco_CSGBox3D5"]
-albedo_color = Color(0.494, 0.406, 0.335, 1)
-roughness = 0.95
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_revestimiento_galeria"]
-albedo_color = Color(0.28, 0.31, 0.34, 1)
-metallic = 0.2
-roughness = 0.7
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umbral"]
-albedo_color = Color(0.18, 0.19, 0.21, 1)
-roughness = 0.4
-
-[sub_resource type="BoxMesh" id="BoxMesh_neon_marquesina"]
-material = SubResource("StandardMaterial3D_bx1ot")
-size = Vector3(0.05, 0.05, 7.6)
-
-[sub_resource type="BoxMesh" id="BoxMesh_umbral"]
-material = SubResource("StandardMaterial3D_umbral")
-size = Vector3(2.5, 0.04, 6.2)
 
 [node name="World" type="Node3D" unique_id=606234663]
 script = SubResource("GDScript_dlwip")
@@ -881,19 +881,19 @@ mesh = SubResource("BoxMesh_48hbk")
 [node name="NombreEurocentro" type="Label3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal" unique_id=2116939458]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.9315672, 3.6, -2.9919434)
 pixel_size = 0.009
+texture_filter = 0
 modulate = Color(0.25882354, 0.84705883, 0.8745098, 1)
+outline_modulate = Color(0.02, 0.06, 0.08, 1)
 text = "EUROCENTRO"
 font_size = 64
-texture_filter = 0
 outline_size = 10
-outline_modulate = Color(0.02, 0.06, 0.08, 1)
 
-[node name="NeonMarquesina" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal"]
+[node name="NeonMarquesina" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal" unique_id=431260624]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49, 3.05, -2.97)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_neon_marquesina")
 
-[node name="UmbralEntrada" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal"]
+[node name="UmbralEntrada" type="MeshInstance3D" parent="Escenario/Galeriacomercial/DecoracionEurocentro/EntradaPrincipal" unique_id=125624034]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.03, -2.95)
 mesh = SubResource("BoxMesh_umbral")
 
@@ -935,7 +935,7 @@ mesh = SubResource("BoxMesh_m4p0s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6000004, 3.1, 6.672901)
 mesh = SubResource("BoxMesh_hjo63")
 
-[node name="VitrinasEurocentro" parent="Escenario/Galeriacomercial/DecoracionEurocentro" instance=ExtResource("22_vitrinas")]
+[node name="VitrinasEurocentro" parent="Escenario/Galeriacomercial/DecoracionEurocentro" unique_id=2021094561 instance=ExtResource("22_vitrinas")]
 
 [node name="Zonadeteccion" type="Node3D" parent="Escenario" unique_id=440909925]
 
@@ -1110,11 +1110,11 @@ wall_min_slide_angle = 0.17453292
 [node name="Policia" parent="." unique_id=428194922 instance=ExtResource("6_37axr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46566057, 0.35980034, -64.39122)
 
-[node name="FachadasAhumada" parent="." instance=ExtResource("20_fachadas")]
+[node name="FachadasAhumada" parent="." unique_id=1004711300 instance=ExtResource("20_fachadas")]
 
-[node name="MobiliarioAhumada" parent="." groups=["geometria_navegacion"] instance=ExtResource("21_mobiliario")]
+[node name="MobiliarioAhumada" parent="." unique_id=2039447605 groups=["geometria_navegacion"] instance=ExtResource("21_mobiliario")]
 
-[node name="NarrativaCapitulo1" parent="." instance=ExtResource("23_narrativa")]
+[node name="NarrativaCapitulo1" parent="." unique_id=656689258 instance=ExtResource("23_narrativa")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1939159178]
 environment = SubResource("Environment_4kxuq")
