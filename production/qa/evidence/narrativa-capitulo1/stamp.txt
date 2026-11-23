@@ -1,0 +1,4 @@
+Reviewed-Content-Hash: Scripts/narrativa/narrativa_capitulo1.gd 7eb9e20d976d031b0db59619ef384a72e36d86d8
+Reviewed-Content-Hash: Asset/datos/dialogos_capitulo1.json 60b24821fafe8ce5a86f09f59e79a137c55b4067
+Reviewed-Content-Hash: Scene/world.tscn ccc619d0ff331721ec6c104f6e2433644ad36bfd
+Reviewed-Content-Hash: Scripts/EstadoJuego.gd 9a0c09032c60e795cd6be4784e5ad0f119df832a

@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" path="res://Scene/fachadas/fachadas_ahumada.tscn" id="20_fachadas"]
 [ext_resource type="PackedScene" path="res://Scene/mobiliario/mobiliario_ahumada.tscn" id="21_mobiliario"]
 [ext_resource type="PackedScene" path="res://Scene/eurocentro/vitrinas_eurocentro.tscn" id="22_vitrinas"]
+[ext_resource type="PackedScene" path="res://Scene/narrativa/narrativa_capitulo1.tscn" id="23_narrativa"]
 
 [sub_resource type="GDScript" id="GDScript_dlwip"]
 script/source = "extends Node3D
@@ -1112,6 +1113,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46566057, 0.35980034, -64.
 [node name="FachadasAhumada" parent="." instance=ExtResource("20_fachadas")]
 
 [node name="MobiliarioAhumada" parent="." groups=["geometria_navegacion"] instance=ExtResource("21_mobiliario")]
+
+[node name="NarrativaCapitulo1" parent="." instance=ExtResource("23_narrativa")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1939159178]
 environment = SubResource("Environment_4kxuq")

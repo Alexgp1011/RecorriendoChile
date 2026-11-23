@@ -1,0 +1,58 @@
+{
+	"_nota": "Textos del capitulo 1 que muestra Scripts/narrativa/narrativa_capitulo1.gd. Cada grupo es una lista de lineas {quien, texto}; los grupos de frases sueltas (pepito, ladron_*) se eligen al azar. Editar aqui no requiere tocar codigo.",
+
+	"precio": [
+		{"quien": "Vendedor", "texto": "¿Esa? La Balín Master 3000, compadre. Ciento cincuenta lucas, y la caja va de regalo."},
+		{"quien": "Protagonista", "texto": "¿Ciento cincuenta? Ando con diez lucas... ni pa' la caja me alcanza."},
+		{"quien": "Vendedor", "texto": "Abajo en Ahumada anda Pepito. Dicen que paga doble... yo no le dije nada."}
+	],
+
+	"compra": [
+		{"quien": "Vendedor", "texto": "Ciento cincuenta lucas justitas. Cuídela, que es de colección."},
+		{"quien": "Protagonista", "texto": "Por fin... valió la pena el día."},
+		{"quien": "Vendedor", "texto": "Y ojo con las palomas de la Plaza, que andan raras hoy."}
+	],
+
+	"transicion": [
+		{"quien": "Protagonista", "texto": "¿Y por qué todas las palomas me están mirando?"}
+	],
+
+	"transicion_cerca": [
+		{"quien": "Voz a lo lejos", "texto": "¡Arranquen! ¡Bajó el Rey Palomo!"},
+		{"quien": "Protagonista", "texto": "Esto no es normal... ni para el centro."}
+	],
+
+	"jefe_titulo": "REY PALOMO",
+	"jefe_subtitulo": "Dueño y señor de la Plaza de Armas",
+	"jefe": [
+		{"quien": "Protagonista", "texto": "Yo solo quería mirar una pistola de balines..."}
+	],
+
+	"victoria": [
+		{"quien": "Protagonista", "texto": "Salí de la pega a dar una vuelta... y terminé peleando con una paloma gigante."},
+		{"quien": "Protagonista", "texto": "Mejor me voy a la casa, antes de que pase otra cosa."}
+	],
+	"victoria_titulo": "CAPÍTULO 1 COMPLETADO",
+	"victoria_subtitulo": "Continuará...",
+
+	"pepito": [
+		{"quien": "Pepito", "texto": "¡Pase, pase, caballero! ¡Pepito paga doble!"},
+		{"quien": "Pepito", "texto": "¡Ojo con la pelotita, que aquí se gana al tiro!"},
+		{"quien": "Pepito", "texto": "Sin miedo, compadre, que la suerte es pa' los valientes."},
+		{"quien": "Pepito", "texto": "¡Doble o nada, mi rey! ¿Quién se atreve?"}
+	],
+
+	"pepito_huye": [
+		{"quien": "Pepito", "texto": "¡Llegaron los Carabineros! ¡Nos vemos, caballero!"}
+	],
+
+	"ladron_acecho": [
+		{"quien": "Ladrón", "texto": "Oye, amigo... ¿tení hora?"},
+		{"quien": "Ladrón", "texto": "Tan apurado que anda el caballero..."}
+	],
+
+	"ladron_robo": [
+		{"quien": "Ladrón", "texto": "¡Gracias por la donación, campeón!"},
+		{"quien": "Ladrón", "texto": "¡Esto es pa' la micro!"}
+	]
+}

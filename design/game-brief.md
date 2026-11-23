@@ -51,22 +51,22 @@ Desde el inicio: los manifestantes golpean (20 de vida) a quien no lleve el cart
 
 ## Goal & fail state
 - Goal: completar las 8 etapas del capítulo y derrotar a Rey Palomo ("CAPÍTULO COMPLETADO").
-- Fail: la vida llega a 0 *(inferred: pantalla de muerte existente)*; o te detiene Carabineros → el capítulo vuelve al inicio (penalización de dinero en revisión, ver B1).
+- Fail: la vida llega a 0 *(inferred: pantalla de muerte existente)*; o te detiene Carabineros → el capítulo vuelve al inicio con $10.000, como al empezar (decidido, B1).
 
 ## Features
 - [x] Misiones del capítulo 1: 8 etapas encadenadas por zonas y eventos (`gestor_misiones.gd`)
 - [x] Cartel de protesta: recoger, levantar/guardar, protege de manifestantes y alerta a Carabineros
 - [x] Manifestantes con IA: patrulla, persecución y golpe; no atacan si el cartel está levantado
 - [x] Carabineros con IA y navegación: patrulla, alerta, persecución, detención
-- [x] Aurocentro de tres pisos con la tienda de balines en el tercero (pistola $150.000)
+- [x] Eurocentro de tres pisos con la tienda de balines en el tercero (pistola $150.000)
 - [x] Pepito paga doble: tres conos, apuestas, premio x2, dificultad creciente, huye de Carabineros y reaparece
 - [x] Ladrón: persigue, roba, escapa a un escondite y reaparece
 - [x] Pistola de balines y disparo
 - [x] Rey Palomo: tres fases, bombardeo, lluvia de proyectiles marcada, picadas, cruz de la Catedral, palomas pequeñas
 - [ ] Catedral Metropolitana reconocible (prioridad visual)
-- [ ] Momento de la compra de la pistola con peso narrativo
-- [ ] Transición narrativa hacia Plaza de Armas
-- [ ] Presentación de Rey Palomo y cierre del capítulo
+- [x] Momento de la compra de la pistola con peso narrativo
+- [x] Transición narrativa hacia Plaza de Armas *(sin audio todavía)*
+- [x] Presentación de Rey Palomo y cierre del capítulo *(sin audio todavía)*
 
 ## Your systems
 - misiones del capítulo · in the slice
@@ -76,8 +76,8 @@ Desde el inicio: los manifestantes golpean (20 de vida) a quien no lleve el cart
 - pistola de balines y combate · in the slice
 - Rey Palomo y su ejército de palomas · in the slice
 - otras fuentes de dinero · later
-- diálogos · later
-- escenas (presentación del jefe, victoria, transiciones) · later
+- diálogos · thin stand-in
+- escenas (compra, transición, presentación del jefe, cierre) · thin stand-in
 - menú principal, opciones, pantalla de inicio y créditos · later
 - música definitiva y sonido ambiente · later
 
@@ -94,7 +94,7 @@ Desde el inicio: los manifestantes golpean (20 de vida) a quien no lleve el cart
 - Un protagonista soldado, policía o superhéroe
 - Propaganda política; humor que dependa de insultos o de referencias políticas
 - Carabineros como enemigo al que se dispara
-- El ladrón como enemigo que se derrota disparando
+- El ladrón como enemigo que se derrota disparando, mientras dura la etapa del dinero (después de la compra sigue activo y un balín lo derriba: decidido así, B3)
 - Recibir la pistola gratis o conseguir dinero derrotando enemigos
 - Fotorrealismo y estilos mezclados
 - Simplificar o reemplazar sistemas que funcionan
@@ -107,8 +107,8 @@ Desde el inicio: los manifestantes golpean (20 de vida) a quien no lleve el cart
 - Guardado de partida *(guessed: no existe en el código y el autor no lo nombró)*
 
 ## Build order
-1. Visual: Paseo Ahumada, Aurocentro y Plaza de Armas, con una Catedral Metropolitana reconocible.
-2. Decidir los puntos de la sección B (penalización por detención, el ladrón después de la compra).
+1. Visual: Paseo Ahumada, Eurocentro y Plaza de Armas, con una Catedral Metropolitana reconocible.
+2. Decidir B10 (reinicio manual y muerte) y lo que queda pendiente en C (audio, transeúntes).
 3. Personajes secundarios y animaciones.
 4. Diálogos, sonido ambiente y escenas que conectan las misiones (compra, transición, presentación y derrota del jefe).
 
@@ -126,7 +126,7 @@ Desde el inicio: los manifestantes golpean (20 de vida) a quien no lleve el cart
 ## A. Historia y mecánicas definidas o implementadas
 
 ### Premisa
-Una persona común, no un soldado, ni un policía, ni un héroe, termina una jornada de trabajo y no quiere volver directo a casa. Decide pasear por el centro de Santiago y visitar el Aurocentro, una galería inspirada en el Eurocentro. Le gustan las réplicas y las pistolas de balines, y quiere mirar productos en una tienda del tercer piso. Sale con $10.000, sin arma y sin ninguna intención de pelear. El pilar del juego es el contraste entre esa persona normal y lo extraordinario que le ocurre: un paseo cotidiano que se transforma, paso a paso, en una aventura absurda.
+Una persona común, no un soldado, ni un policía, ni un héroe, termina una jornada de trabajo y no quiere volver directo a casa. Decide pasear por el centro de Santiago y visitar el Eurocentro, la galería del centro de Santiago. Le gustan las réplicas y las pistolas de balines, y quiere mirar productos en una tienda del tercer piso. Sale con $10.000, sin arma y sin ninguna intención de pelear. El pilar del juego es el contraste entre esa persona normal y lo extraordinario que le ocurre: un paseo cotidiano que se transforma, paso a paso, en una aventura absurda.
 
 ### El capítulo, etapa por etapa
 
@@ -134,7 +134,7 @@ Una persona común, no un soldado, ni un policía, ni un héroe, termina una jor
 |---|---|---|---|
 | BUSCAR_CARTEL | Llega a Ahumada; una manifestación le bloquea el paso | Primer obstáculo: observar, no pelear | Recoger el cartel (`carteles_recogidos > 0`) |
 | ENTRAR_GALERIA | Atraviesa la manifestación con el cartel, esquivando a Carabineros | El dilema del cartel | Entrar en `ZonaEntradaGaleria` |
-| ENCONTRAR_TIENDA | Sube al tercer piso del Aurocentro | Exploración; el objetivo original del paseo | Entrar en `ZonaTiendaBalines` |
+| ENCONTRAR_TIENDA | Sube al tercer piso del Eurocentro | Exploración; el objetivo original del paseo | Entrar en `ZonaTiendaBalines` |
 | CONSEGUIR_DINERO | Descubre que la pistola cuesta $150.000 y solo tiene $10.000 | Primer giro: frustración → riesgo | Aparecen Pepito y el ladrón; avanza al llegar a $150.000 |
 | COMPRAR_PISTOLA | Vuelve con el dinero | Satisfacción | Comprar en el panel del vendedor |
 | SALIR_GALERIA | Sale con su pistola de balines | El tono empieza a cambiar | Entrar en `ZonaSalidaGaleria` |
@@ -151,14 +151,14 @@ Una persona común, no un soldado, ni un policía, ni un héroe, termina una jor
 - **Rey Palomo / Don Palomo**: paloma gigantesca, musculosa, de ojos rojos; intimida y da risa a la vez. Una leyenda absurda del centro. Tiene animaciones idle, fly, attack, hurt y death.
 - **Palomas pequeñas**: su ejército. Más pequeñas y menos imponentes (2 de vida, picotazo de 8); obligan a no concentrarse solo en el jefe.
 
-### El Aurocentro
+### El Eurocentro
 El lugar al que el protagonista quería ir: tres pisos, escaleras y locales geek (videojuegos, anime, cartas, figuras, tecnología, ropa). La tienda de balines está en el tercer piso. Es donde la historia cambia por primera vez: de "llegar a la galería" a "conseguir el dinero y conservarlo".
 
 ### Rey Palomo: el combate (tal como está implementado)
 - **Fase 1**: vuela entre puntos elevados y bombardea con excrementos que marcan el suelo antes de caer. Se esquivan usando jardineras y obstáculos.
 - **Fase 2**: más rápido; invoca palomas pequeñas (2 por oleada, cada 14 s).
 - **Fase 3**: más rápido y agresivo; 3 palomas por oleada cada 10 s, más bombas por ataque.
-- **En todas las fases**: lluvia de proyectiles con círculos rojos en el pavimento, cada vez más frecuente y con más impactos (10 / 18 / 26). También se posa en la cruz de la Catedral, hace picadas (20 de daño) y tiene ventanas de vulnerabilidad. (Ver B4.)
+- **En todas las fases**: lluvia de proyectiles con círculos rojos en el pavimento, cada vez más frecuente y con más impactos (10 / 18 / 26). También se posa en la cruz de la Catedral, hace picadas (20 de daño) y tiene ventanas de vulnerabilidad. La lluvia en las tres fases es la versión aprobada (B4).
 
 ### Tono y humor
 Comedia exagerada: sátira de lo cotidiano, exageración y toques surrealistas, con situaciones reconocibles del centro de Santiago llevadas al absurdo. Situaciones inesperadas, diálogos ingeniosos y personajes ridículos, nunca solo insultos o referencias políticas. Con momentos de tensión y combates entretenidos.
@@ -170,30 +170,40 @@ Curiosidad (el paseo) → tensión (manifestación) → exploración (la galerí
 Metro de Santiago (supervivencia, estaciones, andenes), las micros (supervivencia, encuentros, conflictos caricaturescos) y, más adelante, Valparaíso y otras ciudades. Sin historia definida: cualquier misión o personaje nuevo llega como propuesta.
 
 ### Pendiente de definir por el autor
-- Nombre definitivo de la galería (Aurocentro u otro nombre ficticio)
-- La penalización por detención
-- La transición hacia Plaza de Armas
-- La presentación de Rey Palomo y el cierre del capítulo (escena, diálogos, paso al siguiente)
-- El momento de la compra de la pistola
+- Audio: graznido de Rey Palomo, ruidos de la transición, sonido de la entrega de la pistola
+- Transeúntes que huyen de la Plaza (falta su arte)
+- El paso al capítulo 2 (hoy el cierre dice "Continuará...")
 - Otras fuentes de dinero
 - A quién va dirigido el juego y cuándo se abandonaría (Kill condition)
 
-## B. Inconsistencias y problemas técnicos (revisar antes de decidir)
+## B. Inconsistencias y problemas técnicos
 
-1. **Penalización por detención.** Detenerte devuelve el dinero a **$3.000** (`dinero_inicial = 3000` en `policia.gd`). Al empezar se tienen $10.000 (`EstadoJuego.dinero`). Al recargar la escena, `interfaz_mision.gd` reinicia el capítulo en BUSCAR_CARTEL y la compra; los carteles vuelven a 0. Resultado actual: volver al inicio con $7.000 menos que al empezar. No es una decisión aprobada.
-2. **`reiniciar_partida()` no existe.** `policia.gd` la llama solo si `EstadoJuego` la tiene, y como no la tiene, siempre se ejecuta el respaldo de B1. Ese respaldo no restablece `tiene_pistola_balines`, `policia_alertada`, `ataque_palomas_iniciado` ni `jefe_derrotado`. Hoy no causa errores, porque la pistola visible depende de `GestorMisiones`, que sí se reinicia. Corregirlo significaría crear esa función en `EstadoJuego` con el reinicio que se decida en B1. No se modifica sin aprobación del autor.
-3. **El ladrón después de comprar la pistola.** `activador_evento_calle.gd` tiene `mantener_despues_compra = true`, así que el ladrón (y Pepito) siguen activos después de la compra. Y el disparo de la pistola llama a `kill()` del objetivo: **un balín mata al ladrón**. Choca con "no debe ser un enemigo que se derrota disparando". Además, el dinero robado no se recupera.
-4. **La lluvia de círculos rojos.** En el código aparece desde la **fase 1** (cada 2 paradas) y en las fases 2 y 3 en cada parada. La visión del autor la presenta como el ataque especial de la fase 3.
-5. **El nombre de la galería.** En el juego se lee "EUROCENTRO" (letrero 3D) y los nodos se llaman `DecoracionEurocentro`. En la historia es el Aurocentro, un nombre ficticio. Las fachadas originales también contienen marcas reales, hoy tapadas por letreros ficticios.
-6. **La revelación del precio.** El objetivo pasa a CONSEGUIR_DINERO al entrar en la zona de la tienda, no al hablar con el vendedor: la escena de "preguntar y descubrir el precio" no ocurre como tal.
-7. **La compra hoy es un botón ("COMPRAR") en un panel.** Funciona, pero no tiene el peso narrativo que busca el autor.
-8. **Atasco económico.** Si se pierde con Pepito sin llegar a $150.000, no hay otra fuente de dinero. La única forma de "recuperar" algo es ser detenido (que da $3.000). El autor lo reconoce como mejora futura.
-9. **Arte.** Las fachadas de Ahumada son imágenes de alta resolución, casi fotográficas. Los letreros usan una fuente vectorial. El Aurocentro, los faroles y los quioscos tienen colores planos. Nada de esto cumple aún del todo la regla de pixel art.
+Resueltas el 2026-11-22 con decisión del autor; se conservan como registro.
 
-## C. Propuestas para evaluar (no aprobadas)
-- **Transición a la Plaza:** palomas mirando fijo al protagonista al salir del Aurocentro, gente corriendo en sentido contrario, un graznido grave a lo lejos, y la ciudad que se oscurece un poco al acercarse.
-- **Presentación de Rey Palomo:** la cámara sube hasta la cruz; extiende las alas, grita, y el título "REY PALOMO" aparece antes de que empiece la fase 1. Sin tocar la lógica del combate.
-- **Momento de la compra:** un breve diálogo del vendedor y la pistola que aparece en primera persona por primera vez, con su sonido.
-- **Cierre del capítulo:** la Plaza en calma, las palomas normales vuelven, un comentario del protagonista y un adelanto del siguiente capítulo.
-- **Pepito y el ladrón con voz:** frases cortas chilenas al acercarse (Pepito invitando a apostar, el ladrón al robar).
-- **Penalización por detención:** opciones a decidir; por ejemplo, perder solo el dinero ganado sobre los $10.000, o perder el cartel y volver a la entrada de Ahumada sin reiniciar el dinero.
+1. **Penalización por detención — RESUELTO.** Antes, detenerte dejaba el dinero en $3.000. Decisión del autor: una detención devuelve la partida al inicio del capítulo **con $10.000**, como al empezar. `EstadoJuego.DINERO_INICIAL` es el único valor; `dinero_inicial = 3000` de `policia.gd` queda sin uso (solo era el respaldo).
+2. **`reiniciar_partida()` — RESUELTO.** Ahora existe en `EstadoJuego.gd` y `policia.gd` la usa al detener: restablece dinero, cartel, pistola y las banderas `policia_alertada`, `ataque_palomas_iniciado` y `jefe_derrotado`. Las misiones las reinicia `interfaz_mision.gd` al recargar, como antes. Tests: `tests/unit/estado/estado_reiniciar_partida_test.gd` (vistos fallar antes de la corrección).
+3. **El ladrón después de la compra — DECIDIDO: se mantiene.** Sigue activo tras comprar la pistola (`mantener_despues_compra = true`) y un balín lo derriba. El dinero robado no se recupera.
+4. **La lluvia de círculos rojos — DECIDIDO: vale el código.** Aparece en las tres fases y crece con cada una; la descripción de la visión del autor (solo fase 3) queda superada.
+5. **El nombre de la galería — DECIDIDO: Eurocentro.** Coincide con el letrero del juego y los nodos `DecoracionEurocentro`. Las marcas reales de las fachadas siguen tapadas por letreros ficticios.
+6. **La revelación del precio — RESUELTO en la narrativa.** El objetivo sigue cambiando al entrar en la zona de la tienda (sin tocar la lógica), y en ese momento el vendedor dice el precio y señala a Pepito.
+7. **La compra como simple botón — RESUELTO en la narrativa.** Tras comprar, el vendedor entrega la pistola con un diálogo y la pistola sube a la vista por primera vez.
+8. **Atasco económico — sigue abierto.** Sin otra fuente de dinero si se pierde todo con Pepito. Mejora futura, según el autor. (Una detención ahora devuelve $10.000.)
+9. **Arte — sigue abierto.** Fachadas casi fotográficas, letreros con fuente vectorial, Eurocentro, faroles y quioscos de colores planos; la Catedral no existe todavía (solo el marcador de la cruz).
+10. **Reinicio manual y muerte — NUEVO, abierto.** La tecla de reiniciar (`player.gd`, `restart()`) recarga el nivel **sin** llamar a `EstadoJuego.reiniciar_partida()`: se conservan el dinero y el cartel, y como el cartel sigue recogido, la misión salta sola a "Entra a la galería". Falta decidir si reiniciar (y la muerte, si usa la misma ruta) debe dejar todo como al empezar.
+
+## C. Propuestas
+
+### Implementadas (2026-11-22, aprobadas por el autor)
+`Scripts/narrativa/narrativa_capitulo1.gd` (nodo `NarrativaCapitulo1` en `world.tscn`) escucha `GestorMisiones.etapa_cambiada` y no cambia la lógica de misiones, combate ni físicas. Los textos están en `Asset/datos/dialogos_capitulo1.json`, editables sin tocar código.
+- **El precio:** al llegar a la tienda, el vendedor dice "ciento cincuenta lucas" y señala a Pepito.
+- **La compra:** diálogo del vendedor; la pistola sube a la vista por primera vez; aviso sobre las palomas de la Plaza.
+- **Transición a la Plaza:** palomas de ojos rojos que siguen al protagonista con la mirada al final de Ahumada, el cielo que se oscurece al acercarse, una voz que grita "¡Bajó el Rey Palomo!", y Rey Palomo visible posado en la cruz antes del combate.
+- **Presentación de Rey Palomo:** la cámara sube hacia la cruz, abre las alas, título "REY PALOMO — Dueño y señor de la Plaza de Armas" y la frase del protagonista. El combate empieza al terminar (unos 4,5 s), igual que antes.
+- **Cierre del capítulo:** la luz vuelve, se van las palomas, dos frases del protagonista y "CAPÍTULO 1 COMPLETADO — Continuará...".
+- **Pepito y el ladrón con voz:** Pepito invita a apostar al acercarte y grita al huir de Carabineros; el ladrón habla al acecharte y al robarte.
+
+### Pendientes
+- Audio para todo lo anterior (no hay archivos de sonido todavía).
+- Transeúntes que huyen de la Plaza (falta su arte; hoy es una voz).
+- La Catedral Metropolitana, que da sentido a la cruz y a la presentación.
+- Otras fuentes de dinero (B8).
