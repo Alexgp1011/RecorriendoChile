@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bqnxosfrk4vg"]
 
 [ext_resource type="Script" uid="uid://c8nskvhlpanky" path="res://Scripts/policia.gd" id="1_mu6u3"]
-[ext_resource type="Texture2D" uid="uid://0sbn2ioy7bhy" path="res://Asset/Hoja de sprites de soldado antidisturbios retro.png" id="2_ktxni"]
 [ext_resource type="Script" uid="uid://dcgw688frbkww" path="res://Scripts/Policia_Visual.gd" id="3_ptbof"]
+[ext_resource type="Texture2D" path="res://Asset/sprites/policia_limpio.png" id="90_limpio"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kxuq"]
 radius = 0.35
@@ -15,36 +15,36 @@ size = Vector3(0.7, 1.4, 0.4)
 radius = 7.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptbof"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(0, 626, 127, 313)
+atlas = ExtResource("90_limpio")
+region = Rect2(0, 0, 134, 227)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tw3g5"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(118, 626, 118, 313)
+atlas = ExtResource("90_limpio")
+region = Rect2(402, 0, 134, 227)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w538q"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(327, 626, 109, 313)
+atlas = ExtResource("90_limpio")
+region = Rect2(804, 0, 134, 227)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6djkh"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(0, 326, 149, 326)
+atlas = ExtResource("90_limpio")
+region = Rect2(134, 0, 134, 227)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8evr"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(140, 326, 140, 326)
+atlas = ExtResource("90_limpio")
+region = Rect2(536, 0, 134, 227)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_63a4x"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(280, 326, 140, 326)
+atlas = ExtResource("90_limpio")
+region = Rect2(670, 0, 134, 227)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jcle"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(0, 626, 127, 313)
+atlas = ExtResource("90_limpio")
+region = Rect2(0, 0, 134, 227)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2ou2"]
-atlas = ExtResource("2_ktxni")
-region = Rect2(0, 0, 179, 335)
+atlas = ExtResource("90_limpio")
+region = Rect2(268, 0, 134, 227)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4kxuq"]
 animations = [{
@@ -122,9 +122,10 @@ collision_mask = 3
 shape = SubResource("SphereShape3D_mm1bc")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2075575339]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8760, 0)
 pixel_size = 0.008
 billboard = 2
+alpha_cut = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_4kxuq")
 animation = &"arrest"

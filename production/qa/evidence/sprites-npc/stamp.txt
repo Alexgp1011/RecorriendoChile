@@ -1,0 +1,6 @@
+Reviewed-Content-Hash: Scene/policia.tscn 7821ae9cfe867231c0e7b8bf75027d28734bb9e3
+Reviewed-Content-Hash: Scene/enemy.tscn 3734907f7a105ced18b1e3ace9167bb3c0c5ca28
+Reviewed-Content-Hash: Scene/player.tscn d1a36b7b0c06f93b54ecdf19b883b4f43468fc6a
+Reviewed-Content-Hash: Asset/sprites/policia_limpio.png c76617ddbb34f9ac90409a6b6b75d5a54346ed83
+Reviewed-Content-Hash: Asset/sprites/ladron_limpio.png de4c29a301a2356fbec1068c74c386e757ca3c82
+Reviewed-Content-Hash: Asset/sprites/cartel_mano.png 9422bdbc81452d42c80e32863369d20852421499

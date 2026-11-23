@@ -6,9 +6,9 @@
 [ext_resource type="Script" uid="uid://cpxa6d0cx1j6s" path="res://Scripts/controlcartel.gd" id="4_58ae2"]
 [ext_resource type="Script" uid="uid://di6rg4kd4vrhf" path="res://Scripts/control_arma_visual.gd" id="4_ij4jb"]
 [ext_resource type="Script" uid="uid://ngyu2ymtoy7x" path="res://Scripts/cartel_visual.gd" id="4_p6qlh"]
-[ext_resource type="Texture2D" uid="uid://brbu8notvhc5v" path="res://Asset/Puños y cartel pixelado NO + CAE.png" id="5_2sw5t"]
 [ext_resource type="Script" uid="uid://ngctwhwgl0dt" path="res://Scripts/Salud_jugador.gd" id="5_ivevv"]
 [ext_resource type="Script" uid="uid://bhgj378t85xtc" path="res://Scripts/interfaz_mision.gd" id="6_2sw5t"]
+[ext_resource type="Texture2D" path="res://Asset/sprites/cartel_mano.png" id="91_cartel"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kxuq"]
 height = 1.9838867
@@ -207,7 +207,8 @@ script = ExtResource("4_p6qlh")
 
 [node name="CartelSprite" type="Sprite2D" parent="CanvasLayer/CartelVisual" unique_id=653704376]
 texture_filter = 1
-texture = ExtResource("5_2sw5t")
+texture = ExtResource("91_cartel")
+offset = Vector2(553.0, 2.5)
 
 [node name="InterfazMision" type="Control" parent="CanvasLayer" unique_id=498141053]
 layout_mode = 3
