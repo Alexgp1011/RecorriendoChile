@@ -108,7 +108,7 @@ Desde el inicio: los manifestantes golpean (20 de vida) a quien no lleve el cart
 
 ## Build order
 1. Visual: Paseo Ahumada, Eurocentro y Plaza de Armas, con una Catedral Metropolitana reconocible.
-2. Decidir B10 (reinicio manual y muerte) y lo que queda pendiente en C (audio, transeúntes).
+2. Lo que queda pendiente en C (audio, transeúntes).
 3. Personajes secundarios y animaciones.
 4. Diálogos, sonido ambiente y escenas que conectan las misiones (compra, transición, presentación y derrota del jefe).
 
@@ -189,7 +189,7 @@ Resueltas el 2026-11-22 con decisión del autor; se conservan como registro.
 7. **La compra como simple botón — RESUELTO en la narrativa.** Tras comprar, el vendedor entrega la pistola con un diálogo y la pistola sube a la vista por primera vez.
 8. **Atasco económico — sigue abierto.** Sin otra fuente de dinero si se pierde todo con Pepito. Mejora futura, según el autor. (Una detención ahora devuelve $10.000.)
 9. **Arte — sigue abierto.** Fachadas casi fotográficas, letreros con fuente vectorial, Eurocentro, faroles y quioscos de colores planos; la Catedral no existe todavía (solo el marcador de la cruz).
-10. **Reinicio manual y muerte — NUEVO, abierto.** La tecla de reiniciar (`player.gd`, `restart()`) recarga el nivel **sin** llamar a `EstadoJuego.reiniciar_partida()`: se conservan el dinero y el cartel, y como el cartel sigue recogido, la misión salta sola a "Entra a la galería". Falta decidir si reiniciar (y la muerte, si usa la misma ruta) debe dejar todo como al empezar.
+10. **Reinicio manual y muerte — RESUELTO (2026-11-23).** La tecla de reiniciar y el botón de la pantalla de muerte (`player.gd`, `restart()`) ahora llaman a `EstadoJuego.reiniciar_partida()` antes de recargar: todo vuelve a como al empezar ($10.000, sin cartel, misión "Encuentra un cartel"), igual que una detención. Comprobado en el juego antes (fallaba: conservaba dinero y cartel) y después del arreglo.
 
 ## C. Propuestas
 

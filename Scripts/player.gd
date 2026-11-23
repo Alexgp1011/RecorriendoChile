@@ -299,4 +299,8 @@ func restart() -> void:
 
 	shoot_sound.stop()
 
+	# Reiniciar deja todo como al empezar el capitulo (dinero, cartel,
+	# pistola), igual que una detencion. Ver design/game-brief.md, B10.
+	EstadoJuego.reiniciar_partida()
+
 	get_tree().reload_current_scene()
