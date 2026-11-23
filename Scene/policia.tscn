@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8nskvhlpanky" path="res://Scripts/policia.gd" id="1_mu6u3"]
 [ext_resource type="Script" uid="uid://dcgw688frbkww" path="res://Scripts/Policia_Visual.gd" id="3_ptbof"]
-[ext_resource type="Texture2D" path="res://Asset/sprites/policia_limpio.png" id="90_limpio"]
+[ext_resource type="SpriteFrames" path="res://Asset/sprites/policia_frames.tres" id="92_frames"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4kxuq"]
 radius = 0.35
@@ -13,94 +13,6 @@ size = Vector3(0.7, 1.4, 0.4)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mm1bc"]
 radius = 7.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ptbof"]
-atlas = ExtResource("90_limpio")
-region = Rect2(0, 0, 134, 227)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tw3g5"]
-atlas = ExtResource("90_limpio")
-region = Rect2(402, 0, 134, 227)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w538q"]
-atlas = ExtResource("90_limpio")
-region = Rect2(804, 0, 134, 227)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6djkh"]
-atlas = ExtResource("90_limpio")
-region = Rect2(134, 0, 134, 227)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e8evr"]
-atlas = ExtResource("90_limpio")
-region = Rect2(536, 0, 134, 227)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_63a4x"]
-atlas = ExtResource("90_limpio")
-region = Rect2(670, 0, 134, 227)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5jcle"]
-atlas = ExtResource("90_limpio")
-region = Rect2(0, 0, 134, 227)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s2ou2"]
-atlas = ExtResource("90_limpio")
-region = Rect2(268, 0, 134, 227)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4kxuq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ptbof")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tw3g5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w538q")
-}],
-"loop": 1,
-"name": &"arrest",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6djkh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e8evr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_63a4x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5jcle")
-}],
-"loop": 1,
-"name": &"chase",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s2ou2")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6djkh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e8evr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_63a4x")
-}],
-"loop": 1,
-"name": &"walk",
-"speed": 4.0
-}]
 
 [node name="Policia" type="CharacterBody3D" unique_id=428194922 groups=["policia"]]
 script = ExtResource("1_mu6u3")
@@ -122,12 +34,12 @@ collision_mask = 3
 shape = SubResource("SphereShape3D_mm1bc")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2075575339]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8760, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8880, 0)
 pixel_size = 0.008
 billboard = 2
 alpha_cut = 1
 texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_4kxuq")
+sprite_frames = ExtResource("92_frames")
 animation = &"arrest"
 autoplay = "walk"
 frame = 2

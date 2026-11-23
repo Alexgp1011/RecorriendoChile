@@ -1,0 +1,6 @@
+Reviewed-Content-Hash: Scripts/Policia_Visual.gd 395faca94a6bc3c9bbce588e770c41ddd0de16fe
+Reviewed-Content-Hash: Scripts/enemy.gd 9571e4da681ea4bda0362562120a25dce8b7fdfc
+Reviewed-Content-Hash: Asset/sprites/policia_frames.tres 66c163ef8202cf19469c50aa50cf0965dc92b876
+Reviewed-Content-Hash: Asset/sprites/ladron_frames.tres 3637a05aa4d34667dd630fff44e0b064d1b600bb
+Reviewed-Content-Hash: Scene/policia.tscn effc3bb1f2f30add6d095cd1218b3933b2473a67
+Reviewed-Content-Hash: Scene/enemy.tscn a88735b15d68b825449b0f7f425382feed874c34

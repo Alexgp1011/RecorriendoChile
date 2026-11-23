@@ -15,6 +15,9 @@ extends CharacterBody3D
 @export var minimo_robo: int = 500
 @export var maximo_robo: int = 25000
 @export var unidad_redondeo: int = 500
+## Segundos que el ladron mantiene la pose de embestida (animacion "robo")
+## antes de salir corriendo. 0 = huye de inmediato, como antes.
+@export var duracion_embestida: float = 0.35
 
 # HUIDA
 @export var distancia_llegada: float = 1.5
@@ -80,6 +83,7 @@ var contador_escape: float = 0.0
 var contador_atasco: float = 0.0
 var contador_escondido: float = 0.0
 var contador_diagnostico: float = 0.0
+var contador_embestida: float = 0.0
 
 
 # ==========================================
@@ -469,8 +473,9 @@ func realizar_robo() -> void:
 
 	actualizar_mision_dinero()
 
-	# COMENZAR HUIDA INMEDIATAMENTE
+	# COMENZAR HUIDA (tras la pose de embestida, si hay animacion "robo")
 	comenzar_escape()
+	reproducir_embestida()
 
 
 # ==========================================
@@ -687,6 +692,14 @@ func elegir_ruta_escape() -> void:
 
 func escapar_del_jugador(delta: float) -> void:
 
+	# POSE DE EMBESTIDA: quieto un instante antes de correr
+	if contador_embestida > 0.0:
+
+		contador_embestida -= delta
+		contador_atasco = 0.0
+		detener_movimiento()
+		return
+
 	contador_escape += delta
 
 	# LLEGADA AL DESTINO
@@ -862,6 +875,25 @@ func reproducir_movimiento(escapando: bool) -> void:
 	elif not animated_sprite_3d.is_playing():
 
 		animated_sprite_3d.play(nombre)
+
+
+## Muestra la pose de embestida del robo durante duracion_embestida.
+## Sin animacion "robo" o con duracion 0, no hace nada y huye de inmediato.
+func reproducir_embestida() -> void:
+
+	contador_embestida = 0.0
+
+	if dead or duracion_embestida <= 0.0:
+		return
+
+	if animated_sprite_3d.sprite_frames == null:
+		return
+
+	if not animated_sprite_3d.sprite_frames.has_animation("robo"):
+		return
+
+	contador_embestida = duracion_embestida
+	animated_sprite_3d.play("robo")
 
 
 func reproducir_idle() -> void:

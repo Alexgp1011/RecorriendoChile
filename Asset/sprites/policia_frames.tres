@@ -1,0 +1,235 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://Asset/sprites/policia_limpio.png" id="1_hoja"]
+
+[sub_resource type="AtlasTexture" id="Cuadro_reposo"]
+atlas = ExtResource("1_hoja")
+region = Rect2(0, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_frente1"]
+atlas = ExtResource("1_hoja")
+region = Rect2(150, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_frente2"]
+atlas = ExtResource("1_hoja")
+region = Rect2(300, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_frente3"]
+atlas = ExtResource("1_hoja")
+region = Rect2(450, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_lado1"]
+atlas = ExtResource("1_hoja")
+region = Rect2(600, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_lado2"]
+atlas = ExtResource("1_hoja")
+region = Rect2(750, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_lado3"]
+atlas = ExtResource("1_hoja")
+region = Rect2(900, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_espalda1"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1050, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_espalda2"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1200, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_espalda3"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1350, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_frente1"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1500, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_frente2"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1650, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_frente4"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1800, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_lado1"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1950, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_lado2"]
+atlas = ExtResource("1_hoja")
+region = Rect2(2100, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_lado3"]
+atlas = ExtResource("1_hoja")
+region = Rect2(2250, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_espalda1"]
+atlas = ExtResource("1_hoja")
+region = Rect2(2400, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_espalda2"]
+atlas = ExtResource("1_hoja")
+region = Rect2(2550, 0, 150, 230)
+
+[sub_resource type="AtlasTexture" id="Cuadro_det_espalda3"]
+atlas = ExtResource("1_hoja")
+region = Rect2(2700, 0, 150, 230)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_frente1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_frente2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_frente4")
+}],
+"loop": true,
+"name": &"arrest",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_frente1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_frente2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_frente3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_frente1")
+}],
+"loop": true,
+"name": &"chase",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_reposo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_frente1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_frente2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_frente3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_espalda1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_espalda2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_espalda3")
+}],
+"loop": false,
+"name": &"arrest_espalda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_lado1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_lado2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_det_lado3")
+}],
+"loop": false,
+"name": &"arrest_lado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_espalda1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_espalda2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_espalda3")
+}],
+"loop": true,
+"name": &"chase_espalda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_lado1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_lado2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_lado3")
+}],
+"loop": true,
+"name": &"chase_lado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_espalda2")
+}],
+"loop": true,
+"name": &"idle_espalda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_lado2")
+}],
+"loop": true,
+"name": &"idle_lado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_espalda1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_espalda2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_espalda3")
+}],
+"loop": true,
+"name": &"walk_espalda",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_lado1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_lado2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_lado3")
+}],
+"loop": true,
+"name": &"walk_lado",
+"speed": 4.0
+}]

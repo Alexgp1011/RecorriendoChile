@@ -1,0 +1,87 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://Asset/sprites/ladron_limpio.png" id="1_hoja"]
+
+[sub_resource type="AtlasTexture" id="Cuadro_guardia"]
+atlas = ExtResource("1_hoja")
+region = Rect2(0, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_paso_a"]
+atlas = ExtResource("1_hoja")
+region = Rect2(388, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_embestida"]
+atlas = ExtResource("1_hoja")
+region = Rect2(776, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_paso_b"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1164, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_paso_c"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1552, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_muerte1"]
+atlas = ExtResource("1_hoja")
+region = Rect2(1940, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_muerte2"]
+atlas = ExtResource("1_hoja")
+region = Rect2(2328, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_muerte3"]
+atlas = ExtResource("1_hoja")
+region = Rect2(2716, 0, 388, 383)
+
+[sub_resource type="AtlasTexture" id="Cuadro_muerte4"]
+atlas = ExtResource("1_hoja")
+region = Rect2(3104, 0, 388, 383)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_paso_c")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_muerte1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_muerte2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_muerte3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_muerte4")
+}],
+"loop": false,
+"name": &"death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_guardia")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_paso_c")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_paso_a")
+}, {
+"duration": 1.0,
+"texture": SubResource("Cuadro_paso_b")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Cuadro_embestida")
+}],
+"loop": false,
+"name": &"robo",
+"speed": 5.0
+}]
