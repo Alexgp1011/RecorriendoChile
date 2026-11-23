@@ -45,7 +45,7 @@
 
 ## Testing
 
-- **Framework**: gdUnit4 (recommended; addon not installed yet)
+- **Framework**: gdUnit4 6.2.2 (addons/gdUnit4/, installed by /test-setup)
 - **Minimum Coverage**: [TO BE CONFIGURED]
 - **Required Tests**: Balance formulas, gameplay systems, networking (if applicable)
 
