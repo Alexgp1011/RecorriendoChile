@@ -1,0 +1,151 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://Asset/texturas/canteria.png" id="tex_canteria"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/fierro.png" id="tex_fierro"]
+[ext_resource type="Texture2D" path="res://Asset/texturas/cupula.png" id="tex_cupula"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_canteria"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_canteria")
+roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="Mat_fierro"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_fierro")
+roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(1.0, 1.0, 1.0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="Mat_cupula"]
+albedo_color = Color(1.0, 1.0, 1.0, 1)
+albedo_texture = ExtResource("tex_cupula")
+roughness = 0.95
+texture_filter = 2
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="Mat_luz"]
+albedo_color = Color(1, 0.92, 0.7, 1)
+emission_enabled = true
+emission = Color(1, 0.86, 0.55, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1"]
+material = SubResource("Mat_canteria")
+top_radius = 0.4
+bottom_radius = 0.5
+height = 0.6
+radial_segments = 8
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2"]
+material = SubResource("Mat_fierro")
+top_radius = 0.12
+bottom_radius = 0.16
+height = 3.4
+radial_segments = 8
+
+[sub_resource type="BoxMesh" id="BoxMesh_3"]
+material = SubResource("Mat_fierro")
+size = Vector3(1.2, 0.06, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4"]
+material = SubResource("Mat_luz")
+size = Vector3(0.28, 0.38, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5"]
+material = SubResource("Mat_fierro")
+size = Vector3(1.2, 0.06, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6"]
+material = SubResource("Mat_luz")
+size = Vector3(0.28, 0.38, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7"]
+material = SubResource("Mat_fierro")
+size = Vector3(0.06, 0.06, 1.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8"]
+material = SubResource("Mat_luz")
+size = Vector3(0.28, 0.38, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_9"]
+material = SubResource("Mat_fierro")
+size = Vector3(0.06, 0.06, 1.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_10"]
+material = SubResource("Mat_luz")
+size = Vector3(0.28, 0.38, 0.28)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_11"]
+material = SubResource("Mat_fierro")
+top_radius = 0
+bottom_radius = 0.2
+height = 0.5
+radial_segments = 6
+
+[sub_resource type="CylinderShape3D" id="Forma_12"]
+height = 4.2
+radius = 0.25
+
+[node name="FarolMonumental" type="Node3D"]
+
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("CylinderMesh_1")
+
+[node name="Poste" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+mesh = SubResource("CylinderMesh_2")
+
+[node name="Brazo1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 3.75, 0)
+mesh = SubResource("BoxMesh_3")
+
+[node name="Linterna1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 3.55, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_4")
+
+[node name="Brazo2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 3.75, 0)
+mesh = SubResource("BoxMesh_5")
+
+[node name="Linterna2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 3.55, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_6")
+
+[node name="Brazo3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, 0.3)
+mesh = SubResource("BoxMesh_7")
+
+[node name="Linterna3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.55, 0.6)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_8")
+
+[node name="Brazo4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, -0.3)
+mesh = SubResource("BoxMesh_9")
+
+[node name="Linterna4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.55, -0.6)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_10")
+
+[node name="Remate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.15, 0)
+mesh = SubResource("CylinderMesh_11")
+
+[node name="Colision" type="StaticBody3D" parent="."]
+
+[node name="Forma1" type="CollisionShape3D" parent="Colision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
+shape = SubResource("Forma_12")

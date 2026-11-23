@@ -1,0 +1,5 @@
+Reviewed-Content-Hash: Scene/plaza/glorieta.tscn 82327bb154ebb5139b0d4bc63b066589372a0811
+Reviewed-Content-Hash: Scene/plaza/farol_monumental.tscn b13d81c50c518587180b985b2659355b7ee5dbb4
+Reviewed-Content-Hash: Scene/plaza/monumento_ecuestre.tscn 337a1787b3d1c1406552aa54fca8cf6f7f0c40ce
+Reviewed-Content-Hash: Scene/plaza/arboleda.tscn 74347afefefe32686d0e6ee5381dc3ca93513f7c
+Reviewed-Content-Hash: Scene/world.tscn b26cc178f176e9b49e5d3cc7192f1255059d1e80

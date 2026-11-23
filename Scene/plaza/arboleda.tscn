@@ -1,0 +1,34 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scene/plaza/palmera.tscn" id="escena_palmera"]
+[ext_resource type="PackedScene" path="res://Scene/plaza/arbol.tscn" id="escena_arbol"]
+
+
+[node name="Arboleda" type="Node3D"]
+
+[node name="Palmera1" parent="." instance=ExtResource("escena_palmera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -106.9)
+
+[node name="Palmera2" parent="." instance=ExtResource("escena_palmera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1, 0, -106.6)
+
+[node name="Palmera3" parent="." instance=ExtResource("escena_palmera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -104.5)
+
+[node name="Palmera4" parent="." instance=ExtResource("escena_palmera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -104.5)
+
+[node name="Arbol1" parent="." instance=ExtResource("escena_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6, 0, -110)
+
+[node name="Arbol2" parent="." instance=ExtResource("escena_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6, 0, -118)
+
+[node name="Arbol3" parent="." instance=ExtResource("escena_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6, 0, -126)
+
+[node name="Arbol4" parent="." instance=ExtResource("escena_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6, 0, -134)
+
+[node name="Arbol5" parent="." instance=ExtResource("escena_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6, 0, -140)

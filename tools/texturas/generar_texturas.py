@@ -13,6 +13,7 @@ transparente para las jardineras).
 
 Uso, desde la raiz del proyecto:  python tools/texturas/generar_texturas.py
 """
+import math
 import random
 from pathlib import Path
 
@@ -212,12 +213,79 @@ def flor(rnd):
     return img
 
 
+def palmera(rnd):
+    """PROVISIONAL (se reemplaza por arte de /asset-spec). 48x80 px = 3 x 5 m."""
+    img = Image.new("RGBA", (48, 80), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    tronco = [(118, 92, 62, 255), (98, 74, 48, 255), (82, 60, 38, 255)]
+    for y in range(22, 80):
+        x = 24 + int(2 * ((80 - y) / 58) ** 2)          # leve curva
+        for dx in (-2, -1, 0, 1):
+            c = tronco[0] if dx < 0 else tronco[1]
+            if y % 4 == 0:
+                c = tronco[2]                             # anillos del tronco
+            img.putpixel((x + dx, y), c)
+    verdes = [(54, 120, 52, 255), (72, 146, 62, 255), (40, 96, 42, 255)]
+    cx, cy = 26, 22
+    for ang_deg in range(0, 360, 18):
+        a = math.radians(ang_deg)
+        largo = rnd.randint(15, 21)
+        for t in range(largo):
+            caida = (t / largo) ** 2 * 7                   # las hojas caen hacia afuera
+            x = int(cx + math.cos(a) * t)
+            y = int(cy + math.sin(a) * t * 0.55 + caida)
+            for dy in (-1, 0, 1):
+                if 0 <= x < 48 and 0 <= y + dy < 80:
+                    img.putpixel((x, y + dy), verdes[(t + dy) % 3])
+    d.ellipse([cx - 3, cy - 2, cx + 3, cy + 3], fill=(96, 78, 44, 255))   # cocos
+    return img
+
+
+def arbol(rnd):
+    """PROVISIONAL (se reemplaza por arte de /asset-spec). 64x80 px = 4 x 5 m."""
+    img = Image.new("RGBA", (64, 80), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rectangle([29, 44, 34, 79], fill=(98, 74, 48, 255))
+    d.rectangle([29, 44, 30, 79], fill=(118, 92, 62, 255))
+    hojas = [(46, 104, 46, 255), (62, 128, 56, 255), (36, 86, 38, 255), (84, 150, 70, 255)]
+    for _ in range(26):
+        x, y, r = rnd.randint(12, 52), rnd.randint(8, 46), rnd.randint(7, 11)
+        d.ellipse([x - r, y - r, x + r, y + r], fill=rnd.choice(hojas[:3]))
+    for _ in range(40):
+        x, y = rnd.randint(8, 56), rnd.randint(4, 50)
+        if img.getpixel((x, y))[3]:
+            img.putpixel((x, y), hojas[3])
+    return img
+
+
+def estatua_ecuestre(rnd):
+    """PROVISIONAL (se reemplaza por arte de /asset-spec). Jinete a caballo, bronce
+    patinado. 40x40 px = 2.5 x 2.5 m."""
+    img = Image.new("RGBA", (40, 40), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    bronce, sombra, luz = (70, 104, 92, 255), (48, 74, 66, 255), (104, 140, 124, 255)
+    d.ellipse([8, 18, 30, 29], fill=bronce)                          # cuerpo del caballo
+    for x0 in (10, 14, 24, 27):                                      # patas
+        d.rectangle([x0, 27, x0 + 2, 39], fill=sombra)
+    d.polygon([(26, 21), (31, 10), (35, 11), (33, 22)], fill=bronce)  # cuello
+    d.polygon([(31, 10), (38, 13), (37, 16), (32, 14)], fill=bronce)  # cabeza
+    d.polygon([(8, 22), (3, 30), (5, 31), (10, 25)], fill=sombra)    # cola
+    d.rectangle([17, 8, 22, 19], fill=bronce)                        # jinete
+    d.ellipse([17, 2, 22, 8], fill=bronce)                           # cabeza del jinete
+    d.line([(22, 10), (28, 4)], fill=bronce, width=2)                # brazo en alto
+    for x, y in ((18, 9), (12, 20), (28, 13)):
+        img.putpixel((x, y), luz)
+    return img
+
+
 TEXTURAS = {
     "canteria": canteria, "estuco": lambda r: estuco(r, "estuco"),
     "estuco_ocre": lambda r: estuco(r, "ocre"), "estuco_gris": lambda r: estuco(r, "gris"),
     "teja": teja, "fierro": fierro, "cortina": cortina, "toldo": toldo,
     "madera_banca": madera_banca, "pasto": pasto, "granito": granito, "cupula": cupula,
     "pavimento_plaza": pavimento_plaza, "flor": flor,
+    # Sprites PROVISIONALES: se reemplazan por el arte definitivo de /asset-spec.
+    "palmera": palmera, "arbol": arbol, "estatua_ecuestre": estatua_ecuestre,
 }
 
 
