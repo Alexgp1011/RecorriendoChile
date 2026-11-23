@@ -180,3 +180,6 @@ $RECYCLE.BIN/
 
 # Documento personal, no es un recurso del juego
 Asset/IMM5954_1-18G7ACQ4.pdf
+
+# Informes de gdUnit4 (se regeneran en cada ejecucion; el CI los sube como artefacto)
+/reports/

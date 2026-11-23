@@ -93,3 +93,7 @@ mostrar_cartel={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg")
